@@ -1,25 +1,23 @@
 @font-face {
   font-family: 'Arial-MT';
   src: url("../assets/fonts/Arial-MT.woff");
- }
+}
 
 * {
   box-sizing: border-box;
   margin: 0;
   padding: 0;
+  color: black;
 }
 
 body {
-  min-width: 480px;
-  min-height: 100vh;
   font-family: 'Arial', sans-serif;
   font-size: 16px;
-  color: #fff;
   text-align: center;
   background: center/cover, rgba(0, 0, 0, 0.5);
   background-repeat: no-repeat;
-  background-blend-mode: multiply;
   transition: background-image 1s ease-in-out;
+  overflow: hidden;
 }
 
 .header {
@@ -28,16 +26,14 @@ body {
   align-items: flex-start;
   width: 100%;
   height: 30vh;
-  min-height: 220px;  
-  padding: 20px;
+  padding: 2rem;
 }
 
 .player-controls {
   display: flex;
   align-items: center;
-  justify-content: space-between;
-  width: 120px;
-  margin-bottom: 28px;
+  justify-content: space-around;
+  margin-bottom: 0.3rem;
 }
 
 .play-list {
@@ -67,7 +63,7 @@ body {
 }
 
 .item-active::before {
-  color: #C5B358;
+  color: #fe0303;
 }
 
 .player-icon,
@@ -76,20 +72,22 @@ body {
   width: 32px;
   height: 32px;
   background-size: 32px 32px;
-  background-position: center center;
-  background-repeat: url(/assets/img/board_sand_surf_sea.jpg!d) no-repeat;
+  background-position: center;
+  background-repeat: no-repeat;
   background-color: transparent;
   border: 0;
   outline: 0;
-  opacity: .8;
+  opacity: 0.8;
   cursor: pointer;
-  transition: .3s;  
+  transition: 0.3s all;
+  filter: brightness(100%) invert(100%); /* делает иконку чёрной */
 }
 
 .player-icon:hover,
 .slider-icon:hover,
 .change-quote:hover {
   opacity: 1;
+  filter: brightness(0.7) invert(100%); /* слегка осветляет иконку */
 }
 
 .player-icon:active,
@@ -101,7 +99,6 @@ body {
 }
 
 .player {
-  min-width: 160px;
   transition: opacity 1s;
   transition-delay: 1.5s;
 }
@@ -126,13 +123,15 @@ body {
 }
 
 .weather {
+  background-color: rgba(211, 211, 211, 0.8); 
+  border-radius: 12px;
+  padding: 1rem; /* по желанию */
   display: flex;
   flex-direction: column;
   justify-content: space-between;
   align-items: flex-start;
   row-gap: 5px;
   width: 230px;
-  min-height: 220px;  
   text-align: left;
   transition: opacity 1s;
   transition-delay: 1.5s;
@@ -155,7 +154,21 @@ body {
 }
 
 .player {
-  min-width: 1px;
+  background-color: rgba(211, 211, 211, 0.8); /* светло-серый с прозрачностью 0.5 */
+  border-radius: 12px; /* закруглённые углы */
+  padding: 1rem; /* по желанию */
+  width: 15vw;
+}
+
+.player-extra {
+  padding-top: 0.5rem;
+  display: flex;
+  flex-direction: column;
+}
+
+.progress-bar,
+.volume-slider {
+  width: 100%;
 }
 
 .city {
@@ -164,7 +177,6 @@ body {
   padding: 5px;
   font-size: 20px;
   line-height: 24px;
-  color: #fff;  
   border: 0;
   outline: 0;
   border-bottom: 1px solid #fff;
@@ -177,7 +189,7 @@ body {
   padding: 5px;
   font-size: 18px;
   line-height: 24px;
-  color: #fff;  
+  color: #000000;  
   border: 0;
   outline: 0;
   background-color: transparent;
@@ -189,20 +201,16 @@ body {
 
 .city::placeholder {  
   font-size: 20px;
-  color: #fff;
+  color: #000000;
   opacity: .6;
 }
 
 .main {
-  position: relative;
   display: flex;
   flex-direction: column;
   justify-content: center;
   align-items: center;
-  width: 100%;
   height: 40vh;
-  min-height: 260px;  
-  padding: 20px;
 }
 
 .slider-icon {
@@ -223,11 +231,8 @@ body {
 }
 
 .time {
-  min-height: 124px;
-  margin-bottom: 10px;
   font-family: 'Arial-MT';
-  font-size: 100px;
-  letter-spacing: -4px;  
+  font-size: 50px;
   transition: opacity 1s;
   transition-delay: 1.5s;
 }
@@ -236,35 +241,36 @@ body {
   transition: opacity 1s;
   transition-delay: 1.5s;
   opacity: 0;
+  display: none;
 }
+
 .date {
-  min-height: 28px;
   font-size: 24px;
-  margin-bottom: 20px;
   transition: opacity 1s;
   transition-delay: 1.5s;
 }
 
 .greeting-container {
+  background-color: rgba(211, 211, 211, 0.8); 
+  border-radius: 12px;
+  padding: 0 1rem; /* по желанию */
   display: flex;
   flex-wrap: wrap;
-  justify-content: stretch;
   align-items: center;
-  min-height: 48px;
-  width: 100vw;
   font-size: 40px;
   transition: opacity 1s;
   transition-delay: 1.5s;
+  width: 50%;
 }
 
-.greeting {
-  flex: 1;  
-  padding: 10px;
-  text-align: right;
-  min-width: 45%;
-  min-width: 47px;
-  white-space: nowrap;
+.time_date {
+  display: flex;
+  flex-direction: column;
+  background-color: rgba(211, 211, 211, 0.8); 
+  border-radius: 12px;
+  padding: 1rem; /* по желанию */
 }
+
 
 @media (max-width: 430px) {
   .greeting {
@@ -326,53 +332,51 @@ body {
 
 .name {
   flex: 1;
-  max-width: 50%;
   padding: 10px;
   font-size: 40px;
   text-align: left;
-  color: #fff;
+  color: #000000;
   background-color: transparent;
   border: 0;
   outline: 0;
 }
 
 .name::placeholder {
-  color: #fff;
+  color: #000000;
   opacity: .6;
 }
 
 .footer {
   display: flex;
-  flex-direction: column;
-  justify-content: center;
-  align-items: center;
-  width: 100%;
+  flex-direction: row;
+  justify-content: space-between;
+  align-items: flex-end;
   height: 30vh;
-  min-height: 160px;  
-  padding: 20px;
+  padding: 2rem;
   transition: opacity 1s;
   transition-delay: 1.5s;
 }
 
 .quoteOfTheDay {
+  width: 33%;
   transition: opacity 1s;
   transition-delay: 1.5s;
+  background-color: rgba(211, 211, 211, 0.8); 
+  border-radius: 12px;
+  padding: 1rem; /* по желанию */
 }
 
 .change-quote {
-  margin-bottom: 30px;
+  position: fixed;
+  bottom: 1rem;
+  right: 1rem;
   background-image: url("../assets/svg/reload.svg");  
   transition: opacity 1s;
   transition-delay: 1.5s;
 }
 
-
-.quote {
-  min-height: 32px;
-}
-
 .author {
-  min-height: 20px;
+  font-weight: 700;
 }
 
 @media (max-width: 768px) {
@@ -406,37 +410,68 @@ body {
   cursor: pointer;
 }
 
-/* Dropdown button on hover & focus */
-.dropbtn:hover, .dropbtn:focus {
-  background-color: rgba(196, 185, 170, 0.4)
-}
-
 /* The container <div> - needed to position the dropdown content */
 .dropdown {
   position: relative;
   display: inline-block;
+  font-family: 'Segoe UI', sans-serif;
 }
 
-/* Dropdown Content (Hidden by Default) */
+/* Кнопка */
+.dropbtn {
+  background-color: rgba(211, 211, 211, 0.8); /* светло-серый с прозрачностью 0.5 */
+  border-radius: 12px; /* закруглённые углы */
+  color: black;
+  padding: 12px 20px;
+  font-size: 16px;
+  border: none;
+  border-radius: 6px;
+  cursor: pointer;
+  transition: background-color 0.3s ease;
+}
+
+.dropbtn:hover {
+  background-color: #767e84;
+}
+
+/* Выпадающее содержимое */
 .dropdown-content {
   display: none;
   position: absolute;
-  background-color: transparent;
-  min-width: 103px;
-  box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.2);
+  background-color: white;
+  min-width: 160px;
+  box-shadow: 0 8px 16px rgba(0, 0, 0, 0.15);
+  border-radius: 6px;
   z-index: 1;
+  margin-top: 8px;
+  overflow: hidden;
+  animation: fadeIn 0.3s ease-in-out;
 }
 
-/* Links inside the dropdown */
+/* Ссылки внутри */
 .dropdown-content a {
-  color: rgb(255, 255, 255);
+  color: #333;
   padding: 12px 16px;
   text-decoration: none;
   display: block;
+  transition: background-color 0.2s ease, color 0.2s ease;
 }
 
-/* Change color of dropdown links on hover */
-.dropdown-content a:hover {background-color: #ddd}
+.dropdown-content a:hover {
+  background-color: #767e84;
+  color: #000;
+}
+
+/* Показать меню */
+.show {
+  display: block;
+}
+
+/* Анимация */
+@keyframes fadeIn {
+  from { opacity: 0; transform: translateY(-5px); }
+  to { opacity: 1; transform: translateY(0); }
+}
 
 /* Show the dropdown menu (use JS to add this class to the .dropdown-content container when the user clicks on the dropdown button) */
 .show {display:block;}
@@ -446,54 +481,58 @@ body {
 .autocomplete {
   position: relative;
   display: inline-block;
+  width: 100%;
+  max-width: 300px;
 }
 
 input {
-  border: 1px solid transparent;
-  background-color: #f1f1f1;
-  padding: 10px;
+  width: 100%;
+  padding: 12px 16px;
   font-size: 16px;
+  font-weight: bold;
+  border: none;
+  border-radius: 6px;
+  background-color: #2c2c2c;
+  color: #000000;
+  outline: none;
+  transition: background-color 0.3s, box-shadow 0.3s;
 }
 
+input:focus {
+  background-color: #eeeeee;
+  box-shadow: 0 0 5px rgba(255, 255, 255, 0.2);
+}
 
 .autocomplete-items {
   position: absolute;
-  border: 1px solid transparent;
-  border-bottom: none;
+  border-radius: 0 0 6px 6px;
+  background-color: #333;
+  border: 1px solid #555;
   border-top: none;
   z-index: 99;
-  /*position the autocomplete items to be the same width as the container:*/
   top: 100%;
   left: 0;
   right: 0;
+  overflow: hidden;
 }
 
 .autocomplete-items div {
-  padding: 10px;
+  padding: 12px 16px;
   cursor: pointer;
-  background-color: transparent; 
-  border-bottom: 1px solid #d4d4d4; 
+  background-color: #333;
+  color: #fff;
+  border-bottom: 1px solid #444;
+  transition: background-color 0.2s ease;
 }
 
-/*when hovering an item:*/
 .autocomplete-items div:hover {
-  background-color: #e9e9e9; 
+  background-color: #444;
 }
 
-/*when navigating through the items using the arrow keys:*/
 .autocomplete-active {
-  background-color: DodgerBlue !important; 
-  color: #ffffff; 
+  background-color: #007bff !important;
+  color: #fff;
 }
-
-
-
-
-
-
-
-
-
 
 /* POPUP */
 
@@ -501,7 +540,6 @@ input {
   position: fixed;
   right: 20px;
   top: 20px;
-  background-image: url(/assets/svg/settings-778.svg) color white;
   background-repeat: no-repeat;
   opacity: .6;
 }
@@ -515,8 +553,9 @@ input {
   width: 580px;
   height: 452px;
   margin: 0 auto;
+  top: 10vw;
+  left: 30vw;
   position: absolute;
-  top: 10%;
   background-color: rgba(25, 24, 24, 0.8);
   visibility: hidden;
   z-index: 3;
@@ -525,6 +564,9 @@ input {
   max-width: 100%;
   transition: opacity 1s;
   transition-delay: 1.5s;
+  background-color: rgba(211, 211, 211, 0.8); 
+  border-radius: 12px;
+  padding: 1rem; /* по желанию */
 }
 
 .blure {
@@ -586,37 +628,20 @@ a {
 }
 
 a:hover {
-  /* font-weight: bold; */
   transition: 0.7s;
   color: rgb(199, 39, 39);
-  /* text-shadow: 1px 1px 2px white; */
 }
 
 .is-hide {
   opacity: .5;
 }
 
-/* .loading {
-  opacity: 1;
-  transition: opacity .5s;
-  margin: auto;
-  font-size: 3rem;
-  position: fixed;
-  left: 0;
-  top: 0;
-  width: 100%;
-  height: 100%;
-  color: rgba(255, 255, 255, 0.8);
-  background-color: rgba(0, 0, 0, 0.6);
-  z-index: 100;
-  display: flex;
+.volume-slider {
+  /* width: 150px; */
+  accent-color: #af844c; /* работает в большинстве современных браузеров */
 }
 
-.loading div {
-  margin: auto;
-} */
 /* --------------------TO DO LIST---------------------- */
-
 
 .toDoList {
   position: fixed;

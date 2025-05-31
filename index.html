@@ -7,7 +7,7 @@
   <link href="assets/favicon.ico" rel="shortcut icon" />
   <link rel="stylesheet" href="css/owfont-regular.css" />
   <link rel="stylesheet" href="css/style.css" />
-  <title>Momentum</title>
+  <title>С днем рождения, мам.</title>
 </head>
 
 <body>
@@ -18,14 +18,37 @@
         <button class="play player-icon"></button>
         <button class="play-next player-icon"></button>
       </div>
+      
+      <!-- Переносим аудио сюда -->
+      <audio src="/assets/sounds/Aqua Caelestis.mp3" class="audioClass"></audio>
+      
       <ul class="play-list">
-        <audio src="/assets/sounds/Aqua Caelestis.mp3" class="audioClass"></audio>
         <li class="play-item item-active"></li>
         <li class="play-item"></li>
         <li class="play-item"></li>
         <li class="play-item"></li>
+        <li class="play-item"></li>
       </ul>
+      <div class="player-extra">
+        <label>
+          Позиция трека:
+          <input type="range" class="progress-bar" value="0" min="0" max="100" id="progressBar">
+          <span id="progressValue">00:00 / 00:00</span>
+        </label>
+        <br>
+        <label>
+          Громкость:
+          <input type="range" class="volume-slider" min="0" max="1" step="0.01" value="0.5" id="volumeSlider">
+          <span id="volumeValue">50%</span>
+        </label>
+      </div>
     </div>
+
+    <div class="time_date">
+      <time class="time"></time>
+      <date class="date"></date>
+    </div>
+
     <div class="dropdown">
       <button onclick="myFunction()" class="dropbtn">Choose Language</button>
       <div id="myDropdown" class="dropdown-content">
@@ -34,25 +57,12 @@
       </div>
     </div>
 
-    <!-- <div class="weather">
+    <div class="weather">
       <form autocomplete="off" action="#">
         <div class="autocomplete" style="width:300px;">
           <input id="myInput" type="text" class="city" name="myCountry" placeholder="[Enter city]" value="" />
         </div>
       </form>
-      <div class="city2">And see the forecast</div>
-      <i class="weather-icon owf"></i>
-      <div class="weather-error"></div>
-      <div class="description-container">
-        <span class="temperature"></span>
-        <span class="weather-description"></span>
-      </div>
-      <div class="wind"></div>
-      <div class="humidity"></div>
-    </div> -->
-
-    <div class="weather">
-      <input type="text" class="city" placeholder="[Enter city]" value="" />
       <div class="city2">And see the forecast</div>
       <i class="weather-icon owf"></i>
       <div class="weather-error"></div>
@@ -80,72 +90,70 @@
       <input type="text" class="toDoInput" placeholder="6.">
       <input type="text" class="toDoInput" placeholder="7.">
     </div>
-    <time class="time"></time>
-    <date class="date"></date>
-    <div class="greeting-container">
-      <span class="greeting"></span>
-      <input type="text" class="name" placeholder="[Enter name]" value="" />
-    </div>
+   
   </main>
   <footer class="footer">
-    <button class="change-quote"></button>
+    <div class="greeting-container">
+      <span class="greeting"></span>
+      <input type="text" class="name" placeholder="[Enter name]" value="Наталья Сергеевна!" />
+    </div>
     <div class="quoteOfTheDay">
-      <div class="quote"></div>
-      <div class="author"></div>
+      <button class="change-quote"></button>
+      <div>
+        <div class="quote"></div>
+        <div class="author"></div>
+      </div>
     </div>
     <div class="settings player-icon">
     </div>
-    <div class="blure"></div>
-    <div class="blockPopup transperent-settings">
-      <h2 class="settings_title">Settings</h2>
-      <div class="settings-line">
-      </div>
-      <div class="settings-line">
-        <div class="img-tittle settings-title">Select images source:</div><a class="img-seted settings-seted">GitHub</a>
-      </div>
-      <div class="settings-line">
-        <div class="tag-tittle settings-title"></div><input class="tag-seted" type="text" placeholder="write a tag">
-      </div>
-      <h3 class="visible-blocks">Visible blocks</h3>
-      <div class="settings-line">
-        <div class="b-time-tittle settings-title">Time:</div><a class="b-time-seted settings-seted">Show</a>
-      </div>
-      <div class="settings-line">
-        <div class="b-date-tittle settings-title">Date:</div><a class="b-date-seted settings-seted">Show</a>
-      </div>
-      <div class="settings-line">
-        <div class="b-hello-tittle settings-title">Greetings:</div><a class="b-hello-seted settings-seted">Show</a>
-      </div>
-      <div class="settings-line">
-        <div class="b-quote-tittle settings-title">Quote of the Day:</div><a
-          class="b-quote-seted settings-seted">Show</a>
-      </div>
-      <div class="settings-line">
-        <div class="b-weather-tittle settings-title">Weather:</div><a class="b-weather-seted settings-seted">Show</a>
-      </div>
-      <div class="settings-line">
-        <div class="b-player-tittle settings-title">Player:</div><a class="b-player-seted settings-seted">Show</a>
-      </div>
-      <div class="settings-line">
-        <div class="b-todo-tittle settings-title">Todo list:</div><a
-          class="b-todo-seted settings-seted is-hide">Hide</a>
-      </div>
-      <div class="settings-line">
-        <div class="b-language-tittle settings-title">Language:</div><a class="b-todo-seted settings-seted">Show</a>
-      </div>
-      <!-- <div class="settings-line"> -->
-      <!-- <div class="b-link-tittle settings-title">Link list:</div><a class="b-link-seted settings-seted">Show</a>
-      </div>
-      <div class="settings-line">
-        <div class="b-contact-tittle settings-title">Contact list:</div><a
-          class="b-contact-seted settings-seted">Show</a> -->
-    </div>
-    </div>
-    </div>
-    </div>
-    <!-- <div class="loading"></div> -->
-  </footer>
-  <script src="index.js"></script>
+  </div>
+</div>
+</div>
+</footer>
+<div class="blure"></div>
+<div class="blockPopup transperent-settings">
+  <h2 class="settings_title">Settings</h2>
+  <div class="settings-line">
+  </div>
+  <div class="settings-line">
+    <div class="img-tittle settings-title">Select images source:</div><a class="img-seted settings-seted">GitHub</a>
+  </div>
+  <div class="settings-line">
+    <div class="tag-tittle settings-title"></div><input class="tag-seted" type="text" placeholder="write a tag">
+  </div>
+  <h3 class="visible-blocks">Visible blocks</h3>
+  <div class="settings-line">
+    <div class="b-time-tittle settings-title">Time:</div><a class="b-time-seted settings-seted">Show</a>
+  </div>
+  <div class="settings-line">
+    <div class="b-date-tittle settings-title">Date:</div><a class="b-date-seted settings-seted">Show</a>
+  </div>
+  <div class="settings-line">
+    <div class="b-hello-tittle settings-title">Greetings:</div><a class="b-hello-seted settings-seted">Show</a>
+  </div>
+  <div class="settings-line">
+    <div class="b-quote-tittle settings-title">Quote of the Day:</div><a
+      class="b-quote-seted settings-seted">Show</a>
+  </div>
+  <div class="settings-line">
+    <div class="b-weather-tittle settings-title">Weather:</div><a class="b-weather-seted settings-seted">Show</a>
+  </div>
+  <div class="settings-line">
+    <div class="b-player-tittle settings-title">Player:</div><a class="b-player-seted settings-seted">Show</a>
+  </div>
+  <div class="settings-line">
+    <div class="b-todo-tittle settings-title">Todo list:</div><a
+      class="b-todo-seted settings-seted is-hide">Hide</a>
+  </div>
+  <div class="settings-line">
+    <div class="b-language-tittle settings-title">Language:</div><a class="b-todo-seted settings-seted">Show</a>
+  </div>
+</div>
+  <script type="module" src="index.js"></script>
+  <script async src="slider.js"></script>
+  <script type="module" src="player.js"></script>
+  <script type="module" src="settings.js"></script>
+  <script type="module" src="quotes.js"></script>
 </body>
 
 </html>
