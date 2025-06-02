@@ -7,56 +7,76 @@ const playPauseButton = document.querySelector(".play");
 const audio = document.querySelector("audio");
 const playPrev = document.querySelector(".play-prev");
 const playNext = document.querySelector(".play-next");
-const trackNames = document.querySelectorAll(".play-item");
 
-// Инициализация названий треков
-trackNames.forEach((item, index) => {
-  item.textContent = playList[index].title;
-});
+function renderPlayList() {
+  const playListContainer = document.querySelector(".play-list");
+  playListContainer.innerHTML = ""; // Очистка старого списка
+
+  const indices = [
+    (playNum - 1 + playList.length) % playList.length, // предыдущий
+    playNum, // текущий
+    (playNum + 1) % playList.length, // следующий
+  ];
+
+  indices.forEach((index, i) => {
+    const li = document.createElement("li");
+    li.classList.add("play-item");
+    if (index === playNum) li.classList.add("item-active");
+
+    li.textContent = playList[index].title;
+
+    li.addEventListener("click", () => {
+      if (index === playNum) {
+        if (isPlay) {
+          audio.pause();
+          isPlay = false;
+          playPauseButton.classList.remove("pause");
+        } else {
+          audio.play();
+          isPlay = true;
+          playPauseButton.classList.add("pause");
+        }
+      } else {
+        playNum = index;
+        playTrack(playNum);
+      }
+    });
+
+    playListContainer.appendChild(li);
+  });
+}
+
+renderPlayList();
+audio.src = playList[playNum].src;
 
 // Функция для обновления активного класса
 function updateActiveTrack(index) {
-  trackNames.forEach((item) => item.classList.remove("item-active"));
-  trackNames[index].classList.add("item-active");
+  const items = document.querySelectorAll(".play-item");
+  items.forEach((item, i) => {
+    item.classList.toggle("item-active", i === 1); // Текущий трек всегда в середине
+  });
 }
 
 // Функция для воспроизведения трека
 function playTrack(index) {
   audio.src = playList[index].src;
-  audio.load(); // принудительно загружаем
+  audio.load();
   audio.addEventListener("canplaythrough", function handler() {
-    audio.removeEventListener("canplaythrough", handler); // одноразовое срабатывание
+    audio.removeEventListener("canplaythrough", handler);
     audio.play();
     isPlay = true;
     playPauseButton.classList.add("pause");
     updateActiveTrack(index);
+    renderPlayList(); // << добавлено
   });
 }
-
-// Обработчик клика на элемент списка
-trackNames.forEach((item, index) => {
-  item.addEventListener("click", () => {
-    if (playNum === index) {
-      if (isPlay) {
-        audio.pause();
-        isPlay = false;
-        playPauseButton.classList.remove("pause");
-      } else {
-        audio.play();
-        isPlay = true;
-        playPauseButton.classList.add("pause");
-      }
-    } else {
-      playNum = index;
-      playTrack(playNum);
-    }
-  });
-});
 
 // Обработчик кнопки воспроизведения/паузы
 playPauseButton.addEventListener("click", () => {
   if (!isPlay) {
-    playTrack(playNum);
+    audio.play(); // просто продолжаем, если уже выбран трек
+    isPlay = true;
+    playPauseButton.classList.add("pause");
   } else {
     audio.pause();
     isPlay = false;

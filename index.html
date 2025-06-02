@@ -22,25 +22,19 @@
       <!-- Переносим аудио сюда -->
       <audio src="/assets/sounds/Aqua Caelestis.mp3" class="audioClass"></audio>
       
-      <ul class="play-list">
-        <li class="play-item item-active"></li>
-        <li class="play-item"></li>
-        <li class="play-item"></li>
-        <li class="play-item"></li>
-        <li class="play-item"></li>
-      </ul>
+      <ul class="play-list"></ul>
       <div class="player-extra">
-        <label>
+        <label class="audio_position">
           Позиция трека:
-          <input type="range" class="progress-bar" value="0" min="0" max="100" id="progressBar">
-          <span id="progressValue">00:00 / 00:00</span>
         </label>
+        <input type="range" class="progress-bar" value="0" min="0" max="100" id="progressBar">
+        <span id="progressValue">00:00 / 00:00</span>
         <br>
-        <label>
+        <label class="audio_volume">
           Громкость:
-          <input type="range" class="volume-slider" min="0" max="1" step="0.01" value="0.5" id="volumeSlider">
-          <span id="volumeValue">50%</span>
         </label>
+        <input type="range" class="volume-slider" min="0" max="1" step="0.01" value="0.5" id="volumeSlider">
+        <span id="volumeValue">50%</span>
       </div>
     </div>
 
@@ -50,20 +44,20 @@
     </div>
 
     <div class="dropdown">
-      <button onclick="myFunction()" class="dropbtn">Choose Language</button>
+      <button onclick="myFunction()" class="dropbtn">Выберите язык</button>
       <div id="myDropdown" class="dropdown-content">
-        <a href="#" class="english">English</a>
-        <a href="#" class="russian">Russian</a>
+        <a href="#" class="english">Английский</a>
+        <a href="#" class="russian">Русский</a>
       </div>
     </div>
 
     <div class="weather">
       <form autocomplete="off" action="#">
         <div class="autocomplete" style="width:300px;">
-          <input id="myInput" type="text" class="city" name="myCountry" placeholder="[Enter city]" value="" />
+          <input id="myInput" type="text" class="city" name="myCountry" placeholder="[Введите город]" value="" />
         </div>
       </form>
-      <div class="city2">And see the forecast</div>
+      <div class="city2">И узнайте погоду</div>
       <i class="weather-icon owf"></i>
       <div class="weather-error"></div>
       <div class="description-container">
@@ -95,7 +89,7 @@
   <footer class="footer">
     <div class="greeting-container">
       <span class="greeting"></span>
-      <input type="text" class="name" placeholder="[Enter name]" value="Наталья Сергеевна!" />
+      <input type="text" class="name" placeholder="[Введите имя]" value="" />
     </div>
     <div class="quoteOfTheDay">
       <button class="change-quote"></button>
@@ -112,48 +106,47 @@
 </footer>
 <div class="blure"></div>
 <div class="blockPopup transperent-settings">
-  <h2 class="settings_title">Settings</h2>
+  <h2 class="settings_title">Настройки</h2>
   <div class="settings-line">
   </div>
   <div class="settings-line">
-    <div class="img-tittle settings-title">Select images source:</div><a class="img-seted settings-seted">GitHub</a>
+    <div class="img-tittle settings-title">Выберите ресурс с картинками:</div><a class="img-seted settings-seted">GitHub</a>
   </div>
   <div class="settings-line">
     <div class="tag-tittle settings-title"></div><input class="tag-seted" type="text" placeholder="write a tag">
   </div>
-  <h3 class="visible-blocks">Visible blocks</h3>
+  <h3 class="visible-blocks">Отображаемые блоки</h3>
   <div class="settings-line">
-    <div class="b-time-tittle settings-title">Time:</div><a class="b-time-seted settings-seted">Show</a>
+    <div class="b-time-tittle settings-title">Время:</div><a class="b-time-seted settings-seted">Показывать</a>
   </div>
   <div class="settings-line">
-    <div class="b-date-tittle settings-title">Date:</div><a class="b-date-seted settings-seted">Show</a>
+    <div class="b-date-tittle settings-title">Дата:</div><a class="b-date-seted settings-seted">Показывать</a>
   </div>
   <div class="settings-line">
-    <div class="b-hello-tittle settings-title">Greetings:</div><a class="b-hello-seted settings-seted">Show</a>
+    <div class="b-hello-tittle settings-title">Приветствие:</div><a class="b-hello-seted settings-seted">Показывать</a>
   </div>
   <div class="settings-line">
-    <div class="b-quote-tittle settings-title">Quote of the Day:</div><a
-      class="b-quote-seted settings-seted">Show</a>
+    <div class="b-quote-tittle settings-title">Фраза дня:</div><a
+      class="b-quote-seted settings-seted">Показывать</a>
   </div>
   <div class="settings-line">
-    <div class="b-weather-tittle settings-title">Weather:</div><a class="b-weather-seted settings-seted">Show</a>
+    <div class="b-weather-tittle settings-title">Погода:</div><a class="b-weather-seted settings-seted">Показывать</a>
   </div>
   <div class="settings-line">
-    <div class="b-player-tittle settings-title">Player:</div><a class="b-player-seted settings-seted">Show</a>
+    <div class="b-player-tittle settings-title">Медиаплеер:</div><a class="b-player-seted settings-seted">Показывать</a>
   </div>
   <div class="settings-line">
-    <div class="b-todo-tittle settings-title">Todo list:</div><a
-      class="b-todo-seted settings-seted is-hide">Hide</a>
+    <div class="b-todo-tittle settings-title">Список дел:</div><a
+      class="b-todo-seted settings-seted is-hide">Скрывать</a>
   </div>
   <div class="settings-line">
-    <div class="b-language-tittle settings-title">Language:</div><a class="b-todo-seted settings-seted">Show</a>
+    <div class="b-language-tittle settings-title">Язык:</div><a class="b-todo-seted settings-seted">Показывать</a>
   </div>
 </div>
   <script type="module" src="index.js"></script>
   <script async src="slider.js"></script>
   <script type="module" src="player.js"></script>
   <script type="module" src="settings.js"></script>
-  <script type="module" src="quotes.js"></script>
 </body>
 
 </html>

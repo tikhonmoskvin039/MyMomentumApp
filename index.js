@@ -1,13 +1,17 @@
 import { cities, days, months, rusDays, rusMonths } from "./assets/consts.js";
 
-let locale = "en";
+let locale = "ru";
 
 function getNameOfMonth() {
   let date = new Date();
   let dayNumber = date.getDay();
 
   document.querySelector(".date").textContent =
-    days[dayNumber] + ", " + months[date.getMonth()] + " " + date.getDate();
+    rusDays[dayNumber] +
+    ", " +
+    date.getDate() +
+    " " +
+    rusMonths[date.getMonth()];
 }
 
 getNameOfMonth();
@@ -26,8 +30,8 @@ async function getQuotes() {
 
   let rand = Math.floor(Math.random() * data.length);
 
-  quote.textContent = `"${data[rand].text}"`;
-  author.textContent = `${data[rand].author}`;
+  quote.textContent = `"${data[rand].rustext}"`;
+  author.textContent = `${data[rand].rusauthor}`;
 }
 getQuotes();
 
@@ -61,17 +65,20 @@ let greeting;
 function userGreetings() {
   let hour = new Date().getHours();
   if (hour >= 5 && hour < 12) {
-    greeting = "morning";
+    greeting = "утро";
+    document.querySelector(".greeting").textContent = `Доброе ${greeting},`;
   } else if (hour >= 12 && hour < 18) {
-    greeting = "afternoon";
+    greeting = "день";
+    document.querySelector(".greeting").textContent = `Добрый ${greeting},`;
   } else if (hour >= 18 && hour < 24) {
-    greeting = "evening";
+    greeting = "вечер";
+    document.querySelector(".greeting").textContent = `Добрый ${greeting},`;
   } else if (hour >= 0 && hour < 5) {
-    greeting = "night";
+    greeting = "ночи";
+    document.querySelector(".greeting").textContent = `Доброй ${greeting},`;
   } else if (hour === 0) {
     getTimeOfDay();
   }
-  document.querySelector(".greeting").textContent = `Good ${greeting},`;
 }
 userGreetings();
 //-------------------------------LOCAL STORAGE---------------------------------
@@ -111,6 +118,8 @@ const wind = document.querySelector(".wind");
 const humidity = document.querySelector(".humidity");
 let city = document.querySelector(".city");
 let city2 = document.querySelector(".city2");
+let audio_position = document.querySelector(".audio_position");
+let audio_volume = document.querySelector(".audio_volume");
 
 function hiddenInfo() {
   if (city.value !== "") {
@@ -187,7 +196,6 @@ const imgTitle = document.querySelector(".img-tittle");
 const centralClock = document.querySelector(".time");
 
 const allSettings = document.querySelectorAll(".settings-seted");
-const allPageBlocks = document.querySelectorAll(".settings-title");
 const centralDate = document.querySelector(".date");
 const greetingContainer = document.querySelector(".greeting-container");
 const quoteOfTheDay = document.querySelector(".quoteOfTheDay");
@@ -355,10 +363,12 @@ rus.onclick = () => {
 
   city.placeholder = "[Введите город]";
   userName.placeholder = "[Введите имя]";
-  city2.textContent = "И посмотрите погоду";
+  city2.textContent = "И узнайте погоду";
   languageSelector.textContent = "Выберите язык";
   rus.textContent = "Русский";
   eng.textContent = "Английский";
+  audio_volume.textContent = "Громкость:";
+  audio_position.textContent = "Позиция трека:";
 
   async function getQuotes() {
     const quotes = "quotes.json";
@@ -467,6 +477,8 @@ eng.onclick = () => {
   languageSelector.textContent = "Choose language";
   rus.textContent = "Russian";
   eng.textContent = "English";
+  audio_volume.textContent = "Volume";
+  audio_position.textContent = "Position";
 
   async function getQuotes() {
     const quotes = "quotes.json";
@@ -483,6 +495,16 @@ eng.onclick = () => {
   changeQuotesButton.onclick = getQuotes;
 
   getWeather();
+
+  function getNameOfMonth() {
+    const date = new Date();
+    const dayNumber = date.getDay();
+    const day = date.getDate();
+    const month = date.getMonth();
+
+    document.querySelector(".date").textContent =
+      days[dayNumber] + ", " + day + " " + months[month];
+  }
 
   getNameOfMonth();
 

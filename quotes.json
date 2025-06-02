@@ -76,5 +76,269 @@
         "author": "Moskvin Tikhon S.",
         "rustext": "Если вы изучаете JS сейчас - вы можете изменить свою жизнь.",
         "rusauthor": "Москвин Тихон С."
+    },
+    {
+        "text": "The only thing we have to fear is fear itself.",
+        "author": "Franklin D. Roosevelt",
+        "rustext": "Единственное, чего нам стоит бояться — это самого страха.",
+        "rusauthor": "Франклин Д. Рузвельт"
+    },
+    {
+        "text": "That's one small step for man, one giant leap for mankind.",
+        "author": "Neil Armstrong",
+        "rustext": "Это один маленький шаг для человека, но гигантский скачок для всего человечества.",
+        "rusauthor": "Нил Армстронг"
+    },
+    {
+        "text": "In the middle of difficulty lies opportunity.",
+        "author": "Albert Einstein",
+        "rustext": "Внутри каждой трудности скрыта возможность.",
+        "rusauthor": "Альберт Эйнштейн"
+    },
+    {
+        "text": "Be the change that you wish to see in the world.",
+        "author": "Mahatma Gandhi",
+        "rustext": "Стань тем изменением, которое ты хочешь увидеть в мире.",
+        "rusauthor": "Махатма Ганди"
+    },
+    {
+        "text": "Success is not final, failure is not fatal: It is the courage to continue that counts.",
+        "author": "Winston Churchill",
+        "rustext": "Успех — не окончателен, неудача — не фатальна: значение имеет только мужество продолжать.",
+        "rusauthor": "Уинстон Черчилль"
+    },
+    {
+        "text": "I think, therefore I am.",
+        "author": "René Descartes",
+        "rustext": "Я мыслю, следовательно, я существую.",
+        "rusauthor": "Рене Декарт"
+    },
+    {
+        "text": "To be, or not to be, that is the question.",
+        "author": "William Shakespeare",
+        "rustext": "Быть или не быть — вот в чём вопрос.",
+        "rusauthor": "Уильям Шекспир"
+    },
+    {
+        "text": "Give me liberty, or give me death!",
+        "author": "Patrick Henry",
+        "rustext": "Дайте мне свободу или дайте мне смерть!",
+        "rusauthor": "Патрик Генри"
+    },
+    {
+        "text": "Injustice anywhere is a threat to justice everywhere.",
+        "author": "Martin Luther King Jr.",
+        "rustext": "Несправедливость в любом месте — угроза справедливости повсюду.",
+        "rusauthor": "Мартин Лютер Кинг-младший"
+    },
+    {
+        "text": "Knowledge is power.",
+        "author": "Francis Bacon",
+        "rustext": "Знание — сила.",
+        "rusauthor": "Фрэнсис Бэкон"
+    },
+    {
+        "text": "The unexamined life is not worth living.",
+        "author": "Socrates",
+        "rustext": "Жизнь без самопознания не имеет смысла.",
+        "rusauthor": "Сократ"
+    },
+    {
+        "text": "Imagination is more important than knowledge.",
+        "author": "Albert Einstein",
+        "rustext": "Воображение важнее знаний.",
+        "rusauthor": "Альберт Эйнштейн"
+    },
+    {
+        "text": "You miss 100% of the shots you don’t take.",
+        "author": "Wayne Gretzky",
+        "rustext": "Ты промахиваешься в 100% случаев, когда не делаешь попытку.",
+        "rusauthor": "Уэйн Гретцки"
+    },
+    {
+        "text": "Do not go where the path may lead, go instead where there is no path and leave a trail.",
+        "author": "Ralph Waldo Emerson",
+        "rustext": "Не иди по проложенному пути, иди туда, где его нет, и оставь след.",
+        "rusauthor": "Ральф Уолдо Эмерсон"
+    },
+    {
+        "text": "It always seems impossible until it’s done.",
+        "author": "Nelson Mandela",
+        "rustext": "Всегда кажется невозможным, пока это не сделано.",
+        "rusauthor": "Нельсон Мандела"
+    },
+    {
+        "text": "Happiness depends upon ourselves.",
+        "author": "Aristotle",
+        "rustext": "Счастье зависит от нас самих.",
+        "rusauthor": "Аристотель"
+    },
+    {
+        "text": "Do what you can, with what you have, where you are.",
+        "author": "Theodore Roosevelt",
+        "rustext": "Делай, что можешь, с тем, что имеешь, там, где ты есть.",
+        "rusauthor": "Теодор Рузвельт"
+    },
+    {
+        "text": "Life is what happens when you're busy making other plans.",
+        "author": "John Lennon",
+        "rustext": "Жизнь — это то, что происходит, пока ты строишь другие планы.",
+        "rusauthor": "Джон Леннон"
+    },
+    {
+        "text": "The journey of a thousand miles begins with one step.",
+        "author": "Lao Tzu",
+        "rustext": "Путь в тысячу миль начинается с одного шага.",
+        "rusauthor": "Лао Цзы"
+    },
+    {
+        "text": "Float like a butterfly, sting like a bee.",
+        "author": "Muhammad Ali",
+        "rustext": "Порхай как бабочка, жаль как пчела.",
+        "rusauthor": "Мохаммед Али"
+    },
+    {
+        "text": "The only true wisdom is in knowing you know nothing.",
+        "author": "Socrates",
+        "rustext": "Истинная мудрость — в осознании своего незнания.",
+        "rusauthor": "Сократ"
+    },
+    {
+        "text": "Stay hungry, stay foolish.",
+        "author": "Steve Jobs",
+        "rustext": "Оставайтесь голодными, оставайтесь безрассудными.",
+        "rusauthor": "Стив Джобс"
+    },
+    {
+        "text": "Time is money.",
+        "author": "Benjamin Franklin",
+        "rustext": "Время — деньги.",
+        "rusauthor": "Бенджамин Франклин"
+    },
+    {
+        "text": "Not all those who wander are lost.",
+        "author": "J.R.R. Tolkien",
+        "rustext": "Не все те, кто блуждает, потеряны.",
+        "rusauthor": "Дж. Р. Р. Толкин"
+    },
+    {
+        "text": "The future belongs to those who believe in the beauty of their dreams.",
+        "author": "Eleanor Roosevelt",
+        "rustext": "Будущее принадлежит тем, кто верит в красоту своей мечты.",
+        "rusauthor": "Элеонора Рузвельт"
+    },
+    {
+        "text": "I have not failed. I've just found 10,000 ways that won't work.",
+        "author": "Thomas Edison",
+        "rustext": "Я не потерпел неудачу. Я просто нашёл 10 000 способов, которые не работают.",
+        "rusauthor": "Томас Эдисон"
+    },
+    {
+        "text": "It is during our darkest moments that we must focus to see the light.",
+        "author": "Aristotle",
+        "rustext": "Именно в самые тёмные моменты мы должны сосредоточиться, чтобы увидеть свет.",
+        "rusauthor": "Аристотель"
+    },
+    {
+        "text": "Act as if what you do makes a difference. It does.",
+        "author": "William James",
+        "rustext": "Действуй так, будто твои поступки имеют значение. Так и есть.",
+        "rusauthor": "Уильям Джеймс"
+    },
+    {
+        "text": "We are what we repeatedly do. Excellence, then, is not an act, but a habit.",
+        "author": "Will Durant",
+        "rustext": "Мы — то, что мы делаем постоянно. Совершенство — не действие, а привычка.",
+        "rusauthor": "Уилл Дюрант"
+    },
+    {
+        "text": "Don't cry because it's over, smile because it happened.",
+        "author": "Dr. Seuss",
+        "rustext": "Не плачь, потому что это закончилось. Улыбнись, потому что это было.",
+        "rusauthor": "Доктор Сьюз"
+    },
+    {
+        "text": "You must be the change you wish to see in the world.",
+        "author": "Mahatma Gandhi",
+        "rustext": "Ты должен сам стать тем изменением, которое хочешь видеть в мире.",
+        "rusauthor": "Махатма Ганди"
+    },
+    {
+        "text": "If you judge people, you have no time to love them.",
+        "author": "Mother Teresa",
+        "rustext": "Если вы судите людей, у вас не остаётся времени на то, чтобы любить их.",
+        "rusauthor": "Мать Тереза"
+    },
+    {
+        "text": "The best way to predict the future is to invent it.",
+        "author": "Alan Kay",
+        "rustext": "Лучший способ предсказать будущее — изобрести его.",
+        "rusauthor": "Алан Кэй"
+    },
+    {
+        "text": "It does not matter how slowly you go as long as you do not stop.",
+        "author": "Confucius",
+        "rustext": "Не важно, как медленно ты идёшь, пока ты не останавливаешься.",
+        "rusauthor": "Конфуций"
+    },
+    {
+        "text": "Our lives begin to end the day we become silent about things that matter.",
+        "author": "Martin Luther King Jr.",
+        "rustext": "Наша жизнь начинает угасать в тот день, когда мы молчим о значимых вещах.",
+        "rusauthor": "Мартин Лютер Кинг-младший"
+    },
+    {
+        "text": "The mind is everything. What you think you become.",
+        "author": "Buddha",
+        "rustext": "Разум — это всё. Чем ты мыслишь, тем ты и становишься.",
+        "rusauthor": "Будда"
+    },
+    {
+        "text": "Logic will get you from A to B. Imagination will take you everywhere.",
+        "author": "Albert Einstein",
+        "rustext": "Логика приведёт тебя от А к Б. Воображение — куда угодно.",
+        "rusauthor": "Альберт Эйнштейн"
+    },
+    {
+        "text": "He who opens a school door, closes a prison.",
+        "author": "Victor Hugo",
+        "rustext": "Тот, кто открывает дверь школы, закрывает тюрьму.",
+        "rusauthor": "Виктор Гюго"
+    },
+    {
+        "text": "Courage is resistance to fear, mastery of fear – not absence of fear.",
+        "author": "Mark Twain",
+        "rustext": "Мужество — это сопротивление страху, контроль над ним, а не его отсутствие.",
+        "rusauthor": "Марк Твен"
+    },
+    {
+        "text": "It is not length of life, but depth of life.",
+        "author": "Ralph Waldo Emerson",
+        "rustext": "Важно не сколько ты живёшь, а как глубоко ты живёшь.",
+        "rusauthor": "Ральф Уолдо Эмерсон"
+    },
+    {
+        "text": "Turn your wounds into wisdom.",
+        "author": "Oprah Winfrey",
+        "rustext": "Превращай свои раны в мудрость.",
+        "rusauthor": "Опра Уинфри"
+    },
+    {
+        "text": "Believe you can and you're halfway there.",
+        "author": "Theodore Roosevelt",
+        "rustext": "Поверь, что ты можешь — и ты уже на полпути.",
+        "rusauthor": "Теодор Рузвельт"
+    },
+    {
+        "text": "Everything you can imagine is real.",
+        "author": "Pablo Picasso",
+        "rustext": "Всё, что ты можешь вообразить, реально.",
+        "rusauthor": "Пабло Пикассо"
+    },
+    {
+        "text": "You only live once, but if you do it right, once is enough.",
+        "author": "Mae West",
+        "rustext": "Живём лишь однажды, но если жить правильно, одного раза достаточно.",
+        "rusauthor": "Мэй Уэст"
     }
 ]
