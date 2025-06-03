@@ -1,0 +1,15 @@
+{
+    "manifest_version": 3,
+    "name": "Поздравление для мамы",
+    "version": "1.0",
+    "description": "Расширение, созданное Москвиным Тихоном, которое поздравление вместо новой вкладки",
+    "chrome_url_overrides": {
+      "newtab": "index.html"
+    },
+    "icons": {
+      "16": "assets/favicon.ico",
+      "48": "assets/favicon.ico",
+      "128": "assets/favicon.ico"
+    }
+  }
+  

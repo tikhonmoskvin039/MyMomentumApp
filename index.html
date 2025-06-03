@@ -7,7 +7,7 @@
   <link href="assets/favicon.ico" rel="shortcut icon" />
   <link rel="stylesheet" href="css/owfont-regular.css" />
   <link rel="stylesheet" href="css/style.css" />
-  <title>С днем рождения, мам.</title>
+  <title>С Днем Рождения, мама! ❤️</title>
 </head>
 
 <body>
@@ -20,7 +20,7 @@
       </div>
       
       <!-- Переносим аудио сюда -->
-      <audio src="/assets/sounds/Aqua Caelestis.mp3" class="audioClass"></audio>
+      <audio src="/assets/sounds/Ace of Base - All That She Wants.mp3" class="audioClass"></audio>
       
       <ul class="play-list"></ul>
       <div class="player-extra">
@@ -43,17 +43,17 @@
       <div class="time_date">
         <time class="time"></time>
         <date class="date"></date>
-        <div class="dropdown">
-          <button onclick="myFunction()" class="dropbtn">Выберите язык</button>
-          <div id="myDropdown" class="dropdown-content">
-            <a href="#" class="english">Английский</a>
-            <a href="#" class="russian">Русский</a>
-          </div>
+      </div>
+      <div class="dropdown">
+        <button id="dropdownButton" class="dropbtn">Выберите язык</button>
+        <div id="myDropdown" class="dropdown-content">
+          <a href="#" class="english">Английский</a>
+          <a href="#" class="russian">Русский</a>
         </div>
       </div>
       <form autocomplete="off" action="#">
-        <div class="autocomplete" style="width:300px;">
-          <input id="myInput" type="text" class="city" name="myCountry" placeholder="[Введите город]" value="" />
+        <div class="autocomplete" >
+          <input id="myInput" style="width:100%;" type="text" class="city" name="myCountry" placeholder="[Введите город]" value="" />
         </div>
       </form>
       <div class="city2">И узнайте погоду</div>
@@ -116,33 +116,33 @@
   </div>
   <h3 class="visible-blocks">Отображаемые блоки</h3>
   <div class="settings-line">
-    <div class="b-time-tittle settings-title">Время:</div><a class="b-time-seted settings-seted">Показывать</a>
+    <div class="b-time-tittle settings-title">Время:</div><a class="b-time-seted settings-seted"></a>
   </div>
   <div class="settings-line">
-    <div class="b-date-tittle settings-title">Дата:</div><a class="b-date-seted settings-seted">Показывать</a>
+    <div class="b-date-tittle settings-title">Дата:</div><a class="b-date-seted settings-seted"></a>
   </div>
   <div class="settings-line">
-    <div class="b-hello-tittle settings-title">Приветствие:</div><a class="b-hello-seted settings-seted">Показывать</a>
+    <div class="b-hello-tittle settings-title">Приветствие:</div><a class="b-hello-seted settings-seted"></a>
   </div>
   <div class="settings-line">
-    <div class="b-quote-tittle settings-title">Фраза дня:</div><a
-      class="b-quote-seted settings-seted">Показывать</a>
+    <div class="b-quote-tittle phrase-title">Фраза дня:</div>
+    <a class="b-quote-seted settings-seted"></a>
   </div>
   <div class="settings-line">
-    <div class="b-weather-tittle settings-title">Погода:</div><a class="b-weather-seted settings-seted">Показывать</a>
+    <div class="b-weather-tittle settings-title">Погода:</div><a class="b-weather-seted settings-seted"></a>
   </div>
   <div class="settings-line">
-    <div class="b-player-tittle settings-title">Медиаплеер:</div><a class="b-player-seted settings-seted">Показывать</a>
+    <div class="b-player-tittle settings-title">Медиаплеер:</div><a class="b-player-seted settings-seted"></a>
   </div>
   <div class="settings-line">
-    <div class="b-todo-tittle settings-title">Список дел:</div><a
-      class="b-todo-seted settings-seted is-hide">Скрывать</a>
+    <div class="b-todo-tittle settings-title">Список дел:</div>
+    <a class="b-todo-seted settings-seted is-hide"></a>
   </div>
   <div class="settings-line">
-    <div class="b-language-tittle settings-title">Язык:</div><a class="b-todo-seted settings-seted">Показывать</a>
+    <div class="b-language-tittle settings-title">Язык:</div><a class="b-todo-seted settings-seted"></a>
   </div>
 </div>
-  <script type="module" src="index.js"></script>
+  <script defer type="module" src="index.js"></script>
   <script async src="slider.js"></script>
   <script type="module" src="player.js"></script>
   <script type="module" src="settings.js"></script>
