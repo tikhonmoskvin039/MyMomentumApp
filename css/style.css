@@ -234,13 +234,14 @@ body {
 
 .time {
   font-family: 'Arial-MT';
-  font-size: 50px;
+  width: 100%;
+  font-size: 2rem;
   transition: opacity 1s;
   transition-delay: 1.5s;
 }
 
 .date {
-  font-size: 24px;
+  font-size: 1rem;
   transition: opacity 1s;
   transition-delay: 1.5s;
 }

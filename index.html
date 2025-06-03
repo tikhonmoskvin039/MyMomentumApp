@@ -38,20 +38,19 @@
       </div>
     </div>
 
-    <div class="time_date">
-      <time class="time"></time>
-      <date class="date"></date>
-    </div>
-
-    <div class="dropdown">
-      <button onclick="myFunction()" class="dropbtn">Выберите язык</button>
-      <div id="myDropdown" class="dropdown-content">
-        <a href="#" class="english">Английский</a>
-        <a href="#" class="russian">Русский</a>
-      </div>
-    </div>
-
+    
     <div class="weather">
+      <div class="time_date">
+        <time class="time"></time>
+        <date class="date"></date>
+        <div class="dropdown">
+          <button onclick="myFunction()" class="dropbtn">Выберите язык</button>
+          <div id="myDropdown" class="dropdown-content">
+            <a href="#" class="english">Английский</a>
+            <a href="#" class="russian">Русский</a>
+          </div>
+        </div>
+      </div>
       <form autocomplete="off" action="#">
         <div class="autocomplete" style="width:300px;">
           <input id="myInput" type="text" class="city" name="myCountry" placeholder="[Введите город]" value="" />

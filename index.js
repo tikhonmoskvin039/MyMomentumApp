@@ -23,19 +23,33 @@ const changeQuotesButton = document.querySelector(".change-quote");
 const author = document.querySelector(".author");
 const quote = document.querySelector(".quote");
 
-async function getQuotes() {
+async function getQuotes(locale) {
   const quotes = "quotes.json";
   const res = await fetch(quotes);
   const data = await res.json();
 
-  let rand = Math.floor(Math.random() * data.length);
+  const rand = Math.floor(Math.random() * data.length);
 
-  quote.textContent = `"${data[rand].rustext}"`;
-  author.textContent = `${data[rand].rusauthor}`;
+  // Выбор цитаты по языку
+  if (locale === "ru") {
+    quote.textContent = `"${data[rand].rustext}"`;
+    author.textContent = `${data[rand].rusauthor}`;
+  } else {
+    quote.textContent = `"${data[rand].text}"`;
+    author.textContent = `${data[rand].author}`;
+  }
 }
-getQuotes();
 
-changeQuotesButton.onclick = getQuotes;
+// Показываем первую цитату при загрузке
+getQuotes(locale);
+
+// При клике — меняем вручную
+changeQuotesButton.onclick = () => getQuotes(locale);
+
+// Меняем автоматически каждые 10 секунд
+setInterval(() => {
+  getQuotes(locale);
+}, 10000);
 
 //------------------------------/QUOTES  API---------------------------------
 
@@ -96,7 +110,10 @@ function getLocalStorage() {
     city.value = localStorage.getItem("city");
   }
   if (localStorage.getItem("name")) {
-    userName.value = localStorage.getItem("name");
+    userName.value =
+      localStorage.getItem("name").length > 10
+        ? localStorage.getItem("name").slice(0, 10) + "..."
+        : localStorage.getItem("name");
   }
   if (localStorage.getItem("toDo")) {
     TODOinputs.value = localStorage.getItem("toDo");
