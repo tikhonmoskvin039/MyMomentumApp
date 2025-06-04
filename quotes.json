@@ -340,5 +340,233 @@
         "author": "Mae West",
         "rustext": "Живём лишь однажды, но если жить правильно, одного раза достаточно.",
         "rusauthor": "Мэй Уэст"
-    }
+    },
+    {
+        "text": "Success usually comes to those who are too busy to be looking for it.",
+        "author": "Henry David Thoreau",
+        "rustext": "Успех обычно приходит к тем, кто слишком занят, чтобы его искать.",
+        "rusauthor": "Генри Дэвид Торо"
+      },
+      {
+        "text": "Dream big and dare to fail.",
+        "author": "Norman Vaughan",
+        "rustext": "Мечтай масштабно и осмелься потерпеть неудачу.",
+        "rusauthor": "Норман Вон"
+      },
+      {
+        "text": "Discipline is the bridge between goals and accomplishment.",
+        "author": "Jim Rohn",
+        "rustext": "Дисциплина — это мост между целями и их достижением.",
+        "rusauthor": "Джим Рон"
+      },
+      {
+        "text": "You are never too old to set another goal or to dream a new dream.",
+        "author": "C.S. Lewis",
+        "rustext": "Ты никогда не слишком стар, чтобы поставить новую цель или мечтать о новой мечте.",
+        "rusauthor": "Клайв Льюис"
+      },
+      {
+        "text": "Success is walking from failure to failure with no loss of enthusiasm.",
+        "author": "Winston Churchill",
+        "rustext": "Успех — это переход от неудачи к неудаче без потери энтузиазма.",
+        "rusauthor": "Уинстон Черчилль"
+      },
+      {
+        "text": "The only limit to our realization of tomorrow is our doubts of today.",
+        "author": "Franklin D. Roosevelt",
+        "rustext": "Единственный предел реализации завтрашнего дня — это наши сомнения сегодня.",
+        "rusauthor": "Франклин Д. Рузвельт"
+      },
+      {
+        "text": "Everything you’ve ever wanted is on the other side of fear.",
+        "author": "George Addair",
+        "rustext": "Всё, что ты когда-либо хотел, находится по ту сторону страха.",
+        "rusauthor": "Джордж Аддер"
+      },
+      {
+        "text": "Don’t watch the clock; do what it does. Keep going.",
+        "author": "Sam Levenson",
+        "rustext": "Не смотри на часы — делай, как они. Продолжай идти.",
+        "rusauthor": "Сэм Левенсон"
+      },
+      {
+        "text": "The harder you work for something, the greater you’ll feel when you achieve it.",
+        "author": "Unknown",
+        "rustext": "Чем усерднее ты работаешь над чем-то, тем больше ты почувствуешь, когда достигнешь этого.",
+        "rusauthor": "Неизвестный"
+      },
+      {
+        "text": "Push yourself, because no one else is going to do it for you.",
+        "author": "Unknown",
+        "rustext": "Заставь себя — никто другой не сделает это за тебя.",
+        "rusauthor": "Неизвестный"
+      },
+      {
+        "text": "Great things never come from comfort zones.",
+        "author": "Unknown",
+        "rustext": "Великие вещи не рождаются в зоне комфорта.",
+        "rusauthor": "Неизвестный"
+      },
+      {
+        "text": "Success doesn’t just find you. You have to go out and get it.",
+        "author": "Unknown",
+        "rustext": "Успех не находит тебя сам. Нужно выйти и добиваться его.",
+        "rusauthor": "Неизвестный"
+      },
+      {
+        "text": "Dream it. Wish it. Do it.",
+        "author": "Unknown",
+        "rustext": "Мечтай. Желай. Действуй.",
+        "rusauthor": "Неизвестный"
+      },
+      {
+        "text": "Do something today that your future self will thank you for.",
+        "author": "Unknown",
+        "rustext": "Сделай сегодня то, за что твое будущее «я» скажет спасибо.",
+        "rusauthor": "Неизвестный"
+      },
+      {
+        "text": "Little things make big days.",
+        "author": "Unknown",
+        "rustext": "Маленькие вещи создают большие дни.",
+        "rusauthor": "Неизвестный"
+      },
+      {
+        "text": "It’s going to be hard, but hard does not mean impossible.",
+        "author": "Unknown",
+        "rustext": "Будет трудно, но трудно не значит невозможно.",
+        "rusauthor": "Неизвестный"
+      },
+      {
+        "text": "Don’t wait for opportunity. Create it.",
+        "author": "Unknown",
+        "rustext": "Не жди возможности — создай её.",
+        "rusauthor": "Неизвестный"
+      },
+      {
+        "text": "Sometimes we’re tested not to show our weaknesses, but to discover our strengths.",
+        "author": "Unknown",
+        "rustext": "Иногда нас испытывают не для того, чтобы показать наши слабости, а чтобы открыть наши силы.",
+        "rusauthor": "Неизвестный"
+      },
+      {
+        "text": "The key to success is to focus on goals, not obstacles.",
+        "author": "Unknown",
+        "rustext": "Ключ к успеху — фокусироваться на целях, а не на препятствиях.",
+        "rusauthor": "Неизвестный"
+      },
+      {
+        "text": "Wake up with determination. Go to bed with satisfaction.",
+        "author": "Unknown",
+        "rustext": "Просыпайся с решимостью, засыпай с удовлетворением.",
+        "rusauthor": "Неизвестный"
+      },
+      {
+        "text": "Believe in yourself and all that you are.",
+        "author": "Christian D. Larson",
+        "rustext": "Верь в себя и во всё, чем ты являешься.",
+        "rusauthor": "Кристиан Д. Ларсон"
+      },
+      {
+        "text": "Don’t limit your challenges. Challenge your limits.",
+        "author": "Jerry Dunn",
+        "rustext": "Не ограничивай свои задачи. Испытай свои пределы.",
+        "rusauthor": "Джерри Данн"
+      },
+      {
+        "text": "Start where you are. Use what you have. Do what you can.",
+        "author": "Arthur Ashe",
+        "rustext": "Начни там, где ты есть. Используй то, что у тебя есть. Делай, что можешь.",
+        "rusauthor": "Артур Эш"
+      },
+      {
+        "text": "You don’t have to be great to start, but you have to start to be great.",
+        "author": "Zig Ziglar",
+        "rustext": "Не нужно быть великим, чтобы начать, но нужно начать, чтобы стать великим.",
+        "rusauthor": "Зиг Зиглар"
+      },
+      {
+        "text": "It always seems impossible until it is done.",
+        "author": "Nelson Mandela",
+        "rustext": "Всегда кажется невозможным, пока это не сделано.",
+        "rusauthor": "Нельсон Мандела"
+      },
+      {
+        "text": "You are stronger than you think.",
+        "author": "Unknown",
+        "rustext": "Ты сильнее, чем думаешь.",
+        "rusauthor": "Неизвестный"
+      },
+      {
+        "text": "The expert in anything was once a beginner.",
+        "author": "Helen Hayes",
+        "rustext": "Любой эксперт когда-то был новичком.",
+        "rusauthor": "Хелен Хейс"
+      },
+      {
+        "text": "Success is not for the lazy.",
+        "author": "Unknown",
+        "rustext": "Успех — не для ленивых.",
+        "rusauthor": "Неизвестный"
+      },
+      {
+        "text": "Make each day your masterpiece.",
+        "author": "John Wooden",
+        "rustext": "Сделай каждый день своим шедевром.",
+        "rusauthor": "Джон Вуден"
+      },
+      {
+        "text": "Be yourself; everyone else is already taken.",
+        "author": "Oscar Wilde",
+        "rustext": "Будь собой — все остальные роли уже заняты.",
+        "rusauthor": "Оскар Уайльд"
+      },
+      {
+        "text": "Hustle in silence and let your success make the noise.",
+        "author": "Unknown",
+        "rustext": "Трудись в тишине — пусть твой успех говорит за тебя.",
+        "rusauthor": "Неизвестный"
+      },
+      {
+        "text": "Fall seven times, stand up eight.",
+        "author": "Japanese Proverb",
+        "rustext": "Упади семь раз — поднимись восемь.",
+        "rusauthor": "Японская пословица"
+      },
+      {
+        "text": "The secret of getting ahead is getting started.",
+        "author": "Mark Twain",
+        "rustext": "Секрет продвижения вперёд — это начать.",
+        "rusauthor": "Марк Твен"
+      },
+      {
+        "text": "If you’re going through hell, keep going.",
+        "author": "Winston Churchill",
+        "rustext": "Если ты проходишь через ад — не останавливайся.",
+        "rusauthor": "Уинстон Черчилль"
+      },
+      {
+        "text": "The way to get started is to quit talking and begin doing.",
+        "author": "Walt Disney",
+        "rustext": "Чтобы начать, перестань говорить и начни делать.",
+        "rusauthor": "Уолт Дисней"
+      },
+      {
+        "text": "Hardships often prepare ordinary people for an extraordinary destiny.",
+        "author": "C.S. Lewis",
+        "rustext": "Трудности часто подготавливают обычных людей к необычной судьбе.",
+        "rusauthor": "Клайв Льюис"
+      },
+      {
+        "text": "One day or day one. You decide.",
+        "author": "Unknown",
+        "rustext": "Однажды или первый день — ты решаешь.",
+        "rusauthor": "Неизвестный"
+      },
+      {
+        "text": "You didn’t come this far to only come this far.",
+        "author": "Unknown",
+        "rustext": "Ты пришёл не так далеко, чтобы остановиться здесь.",
+        "rusauthor": "Неизвестный"
+      }
 ]

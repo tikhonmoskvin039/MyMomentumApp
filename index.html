@@ -43,6 +43,7 @@
       <div class="time_date">
         <time class="time"></time>
         <date class="date"></date>
+        <year class="year"></year>
       </div>
       <div class="dropdown">
         <button id="dropdownButton" class="dropbtn">Выберите язык</button>
@@ -56,7 +57,7 @@
           <input id="myInput" style="width:100%;" type="text" class="city" name="myCountry" placeholder="[Введите город]" value="" />
         </div>
       </form>
-      <div class="city2">И узнайте погоду</div>
+      <div class="defaultText">И узнайте погоду</div>
       <i class="weather-icon owf"></i>
       <div class="weather-error"></div>
       <div class="description-container">
@@ -91,10 +92,12 @@
       <input type="text" class="name" placeholder="[Введите имя]" value="" />
     </div>
     <div class="quoteOfTheDay">
-      <button class="change-quote"></button>
       <div>
         <div class="quote"></div>
         <div class="author"></div>
+      </div>
+      <div class="quote_btn">
+        <button class="change-quote"/>
       </div>
     </div>
     <div class="settings player-icon">
@@ -104,42 +107,29 @@
 </div>
 </footer>
 <div class="blure"></div>
-<div class="blockPopup transperent-settings">
-  <h2 class="settings_title">Настройки</h2>
+<div class="blockPopup transparent-settings">
+  <h2 class="visible-blocks">Отображаемые блоки</h2>
   <div class="settings-line">
+    <div class="b-time-title settings-title">Время:</div><a class="b-time-seted settings-seted"></a>
   </div>
   <div class="settings-line">
-    <div class="img-tittle settings-title">Выберите ресурс с картинками:</div><a class="img-seted settings-seted">GitHub</a>
+    <div class="b-date-title settings-title">Дата:</div><a class="b-date-seted settings-seted"></a>
   </div>
   <div class="settings-line">
-    <div class="tag-tittle settings-title"></div><input class="tag-seted" type="text" placeholder="write a tag">
-  </div>
-  <h3 class="visible-blocks">Отображаемые блоки</h3>
-  <div class="settings-line">
-    <div class="b-time-tittle settings-title">Время:</div><a class="b-time-seted settings-seted"></a>
+    <div class="b-hello-title settings-title">Приветствие:</div><a class="b-hello-seted settings-seted"></a>
   </div>
   <div class="settings-line">
-    <div class="b-date-tittle settings-title">Дата:</div><a class="b-date-seted settings-seted"></a>
-  </div>
-  <div class="settings-line">
-    <div class="b-hello-tittle settings-title">Приветствие:</div><a class="b-hello-seted settings-seted"></a>
-  </div>
-  <div class="settings-line">
-    <div class="b-quote-tittle phrase-title">Фраза дня:</div>
+    <div class="b-quote-title phrase-title">Фраза дня:</div>
     <a class="b-quote-seted settings-seted"></a>
   </div>
   <div class="settings-line">
-    <div class="b-weather-tittle settings-title">Погода:</div><a class="b-weather-seted settings-seted"></a>
+    <div class="b-weather-title settings-title">Погода:</div><a class="b-weather-seted settings-seted"></a>
   </div>
   <div class="settings-line">
-    <div class="b-player-tittle settings-title">Медиаплеер:</div><a class="b-player-seted settings-seted"></a>
+    <div class="b-player-title settings-title">Медиаплеер:</div><a class="b-player-seted settings-seted"></a>
   </div>
   <div class="settings-line">
-    <div class="b-todo-tittle settings-title">Список дел:</div>
-    <a class="b-todo-seted settings-seted is-hide"></a>
-  </div>
-  <div class="settings-line">
-    <div class="b-language-tittle settings-title">Язык:</div><a class="b-todo-seted settings-seted"></a>
+    <div class="b-language-title settings-title">Язык:</div><a class="b-todo-seted settings-seted"></a>
   </div>
 </div>
   <script defer type="module" src="index.js"></script>

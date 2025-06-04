@@ -32,7 +32,7 @@ body {
 /* Audio Player */
 .player {
   font-size: 0.7rem;
-  width: 11vw;
+  width: 15vw;
   padding: 1rem;
   border-radius: 12px;
   background-color: rgba(211, 211, 211, 0.8);
@@ -180,7 +180,7 @@ body {
 
 /* City Input */
 .city,
-.city2 {
+.defaultText {
   display: flex;
   height: 34px;
   width: 100%;
@@ -199,13 +199,13 @@ body {
   border-bottom: 1px solid #fff;
 }
 
-.city2 {
+.defaultText {
   width: 200px;
   color: #000;
 }
 
 .city::placeholder,
-.city2::placeholder {
+.defaultText::placeholder {
   color: #000;
   opacity: 0.6;
 }
@@ -243,10 +243,12 @@ body {
   transition-delay: 1.5s;
 }
 
-.date {
-  font-size: 1.5rem;
+.date, .year {
+  font-size: 1.4rem;
+  font-style: oblique;
   transition: opacity 1s;
   transition-delay: 1.5s;
+  white-space: pre-line;
 }
 
 /* Greeting */
@@ -293,6 +295,8 @@ body {
 
 /* Quote */
 .quoteOfTheDay {
+  display: flex;
+  justify-content: space-between;
   width: 33%;
   padding: 1rem;
   border-radius: 12px;
@@ -305,10 +309,13 @@ body {
   font-weight: 700;
 }
 
+.quote_btn {
+  display: flex;
+  justify-content: flex-end;
+  align-items: flex-end;
+}
+
 .change-quote {
-  position: fixed;
-  right: 1rem;
-  bottom: 1rem;
   background-image: url("../assets/svg/reload.svg");
   transition: opacity 1s;
   transition-delay: 1.5s;
@@ -415,6 +422,7 @@ input:focus {
   display: block;
 }
 
+
 @keyframes fadeIn {
   from {
     opacity: 0;
@@ -432,7 +440,7 @@ input:focus {
 }
 
 /* Transparent Block */
-.transperent-block {
+.transparent-block {
   opacity: 0;
   display: none;
   transition: opacity 1s;
@@ -515,14 +523,23 @@ input:focus {
 /* ---------- SETTINGS ICON ---------- */
 
 .settings {
+  filter: brightness(0.7) invert(0%);
   position: fixed;
-  top: 20px;
-  right: 20px;
+  top: 1rem;
+  right: 1rem;
+  width: 50px;
+  height: 50px;
   background-repeat: no-repeat;
   opacity: 0.6;
+  transition: all 0.6s ease;
 }
 
-.transperent-settings {
+.settings:hover {
+  scale: 1.2;
+  filter: brightness(0.7) invert(100%);
+}
+
+.transparent-settings {
   transition: opacity 0.6s;
   opacity: 0;
 }
@@ -535,7 +552,7 @@ input:focus {
   top: 10vw;
   left: 30vw;
   width: 580px;
-  height: 452px;
+  height: fit-content;
   max-width: 100%;
   margin: 0 auto;
   padding: 1rem;
@@ -573,14 +590,9 @@ input:focus {
 
 /* ---------- HEADINGS ---------- */
 
-.settings_title {
-  margin-bottom: 10px;
-  opacity: 0.7;
-}
-
-.blockPopup h3 {
-  margin-top: 12px;
+.blockPopup h2 {
   opacity: 0.6;
+  margin: 0 0 1rem 0;
 }
 
 h2 {

@@ -1,5 +1,7 @@
 import { cities, rusDays, rusMonths } from "./assets/consts.js";
 
+export const currentYear = new Date().getFullYear();
+
 let locale = "ru";
 export const getLocale = () => locale;
 export const setLocale = (val) => {
@@ -21,6 +23,7 @@ function getNameOfMonth() {
     date.getDate() +
     " " +
     rusMonths[date.getMonth()];
+  document.querySelector(".year").textContent = currentYear;
 }
 
 getNameOfMonth();
@@ -116,15 +119,9 @@ userGreetings();
 //-------------------------------LOCAL STORAGE---------------------------------
 const userName = document.querySelector(".name");
 
-const tagSetted = document.querySelector(".tag-seted");
-
-const TODOinputs = document.querySelector(".toDoInput");
-
 function setLocalStorage() {
   localStorage.setItem("city", city.value);
   localStorage.setItem("name", userName.value);
-  localStorage.setItem("toDo", TODOinputs.value);
-  localStorage.setItem("tagSetted", tagSetted.value);
 }
 window.addEventListener("beforeunload", setLocalStorage);
 function getLocalStorage() {
@@ -136,12 +133,6 @@ function getLocalStorage() {
       localStorage.getItem("name").length > 10
         ? localStorage.getItem("name").slice(0, 10) + "..."
         : localStorage.getItem("name");
-  }
-  if (localStorage.getItem("toDo")) {
-    TODOinputs.value = localStorage.getItem("toDo");
-  }
-  if (localStorage.getItem("tagSetted")) {
-    tagSetted.value = localStorage.getItem("tagSetted");
   }
   getWeather();
   hiddenInfo();
@@ -155,14 +146,14 @@ const temperature = document.querySelector(".temperature");
 const weatherDescription = document.querySelector(".weather-description");
 const wind = document.querySelector(".wind");
 const humidity = document.querySelector(".humidity");
-let city = document.querySelector(".city");
-let city2 = document.querySelector(".city2");
+const city = document.querySelector(".city");
+const defaultText = document.querySelector(".defaultText");
 
 function hiddenInfo() {
   if (city.value !== "") {
-    city2.classList.add("transperent-block");
+    defaultText.classList.add("transparent-block");
   } else if (city.value == "") {
-    city2.classList.remove("transperent-block");
+    defaultText.classList.remove("transparent-block");
   }
 
   if (city.value == false) {
@@ -179,16 +170,26 @@ function hiddenInfo() {
     humidity.classList.remove("hidden");
   }
 }
+
 city.addEventListener("input", hiddenInfo);
 
 city.addEventListener("change", getWeather);
 
 export async function getWeather() {
-  if (!city.value) return;
+  if (!city.value) {
+    // Очистка UI, если поле пустое
+    weatherDescription.textContent = "";
+    temperature.textContent = "";
+    wind.textContent = "";
+    humidity.textContent = "";
+    weatherIcon.style.display = "none";
+    return;
+  }
+
   const url = `https://api.openweathermap.org/data/2.5/weather?q=${city.value}&lang=${locale}&appid=8448ec756fbb6beea60615c2a2cdae25&units=metric`;
 
   if (city.value == true) {
-    city2.remove();
+    defaultText.remove();
   }
 
   const res = await fetch(url);
@@ -209,13 +210,13 @@ export async function getWeather() {
   }
 
   const data = await res.json();
-  weatherIcon.style.display = "flex";
   weatherDescription.style.marginTop = 0;
   weatherDescription.style.color = "black";
   weatherDescription.style.fontWeight = "normal";
 
   weatherIcon.className = "weather-icon owf";
   if (data.weather && Array.isArray(data.weather) && data.weather.length > 0) {
+    weatherIcon.style.display = "flex";
     weatherIcon.classList.add(`owf-${data.weather[0].id}`);
     temperature.textContent = `${Math.round(data.main.temp)}°C`;
     weatherDescription.textContent = data.weather[0].description;
@@ -230,6 +231,7 @@ export async function getWeather() {
     temperature.textContent = "";
     wind.textContent = "";
     humidity.textContent = "";
+    weatherIcon.style.display = "none";
   }
 }
 

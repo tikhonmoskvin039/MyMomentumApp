@@ -4,65 +4,55 @@ import {
   getWeather,
   quote,
   author,
+  currentYear,
 } from "./index.js";
 import { days, months, rusDays, rusMonths } from "./assets/consts.js";
 
 // DOM-элементы
 const settings = document.querySelector(".settings");
-const toDoSeted = document.querySelector(".b-todo-seted");
-const setTitle = document.querySelector(".settings_title");
 const visibleBlocks = document.querySelector(".visible-blocks");
 
-const timeBlock = document.querySelector(".b-time-tittle");
-const dateBlock = document.querySelector(".b-date-tittle");
-const greetingsBlock = document.querySelector(".b-hello-tittle");
-const quotesBlock = document.querySelector(".b-quote-tittle");
-const weatherBlock = document.querySelector(".b-weather-tittle");
-const playerBlock = document.querySelector(".b-player-tittle");
-const toDoBlock = document.querySelector(".b-todo-tittle");
-const imgTitle = document.querySelector(".img-tittle");
+const timeBlock = document.querySelector(".b-time-title");
+const dateBlock = document.querySelector(".b-date-title");
+const year = document.querySelector(".year");
+const languageBlock = document.querySelector(".b-language-title");
+const greetingsBlock = document.querySelector(".b-hello-title");
+const quotesBlock = document.querySelector(".b-quote-title");
+const weatherBlock = document.querySelector(".b-weather-title");
+const playerBlock = document.querySelector(".b-player-title");
 const centralClock = document.querySelector(".time");
 const centralDate = document.querySelector(".date");
 const userName = document.querySelector(".name");
 const greetingContainer = document.querySelector(".greeting-container");
 const quoteOfTheDay = document.querySelector(".quoteOfTheDay");
 const player = document.querySelector(".player");
-const todoTable = document.querySelector(".toDoList");
-const toDoDiv = document.querySelector(".toDoDive");
 const popupBlock = document.querySelector(".blockPopup");
 const blure = document.querySelector(".blure");
-const tagSetted = document.querySelector(".tag-seted");
-const imgSetted = document.querySelector(".img-seted");
 const weather = document.querySelector(".weather");
 
-const city = document.querySelector(".city");
-const city2 = document.querySelector(".city2");
 const audioPosition = document.querySelector(".audio_position");
 const audioVolume = document.querySelector(".audio_volume");
 
 const allSettings = document.querySelectorAll(".settings-seted");
+const city = document.querySelector(".city");
+const defaultText = document.querySelector(".defaultText");
 
 const languageSelector = document.querySelector(".dropbtn");
 const rus = document.querySelector(".russian");
 const eng = document.querySelector(".english");
-const closeToDo = document.querySelector(".close");
 
 // Карта блоков для переключения видимости
 const toggleMap = {
-  1: () => centralClock.classList.toggle("transperent-block"),
-  2: () => centralDate.classList.toggle("transperent-block"),
-  3: () => greetingContainer.classList.toggle("transperent-block"),
+  1: () => centralClock.classList.toggle("transparent-block"),
+  2: () => centralDate.classList.toggle("transparent-block"),
+  3: () => greetingContainer.classList.toggle("transparent-block"),
   4: () => {
-    quoteOfTheDay.classList.toggle("transperent-block");
-    changeQuotesButton.classList.toggle("transperent-block");
+    quoteOfTheDay.classList.toggle("transparent-block");
+    changeQuotesButton.classList.toggle("transparent-block");
   },
-  5: () => weather.classList.toggle("transperent-block"),
-  6: () => player.classList.toggle("transperent-block"),
-  7: () => {
-    const isVisible = todoTable.style.visibility === "visible";
-    todoTable.style.visibility = isVisible ? "hidden" : "visible";
-  },
-  8: () => languageSelector.classList.toggle("transperent-block"),
+  5: () => weather.classList.toggle("transparent-block"),
+  6: () => player.classList.toggle("transparent-block"),
+  7: () => languageSelector.classList.toggle("transparent-block"),
 };
 
 function setupSettingsToggle(locale) {
@@ -70,8 +60,6 @@ function setupSettingsToggle(locale) {
   const hideText = locale === "ru" ? "Скрыть" : "Hide";
 
   allSettings.forEach((btn, index) => {
-    if (index === 0) return; // пропускаем кнопку GitHub
-
     btn.textContent = btn.classList.contains("is-hide") ? hideText : showText;
 
     btn.onclick = () => {
@@ -79,18 +67,11 @@ function setupSettingsToggle(locale) {
       btn.classList.toggle("is-hide");
       btn.textContent = isHidden ? showText : hideText;
 
-      if (toggleMap[index]) {
-        toggleMap[index]();
-
-        // специальная логика для тудулиста
-        if (index === 7) {
-          todoTable.style.visibility = isHidden ? "visible" : "hidden";
-        }
+      if (toggleMap[index + 1]) {
+        toggleMap[index + 1]();
       }
     };
   });
-
-  allSettings[0].textContent = "GitHub";
 }
 
 // Смена языка
@@ -104,27 +85,22 @@ function updateLanguageText(locale) {
 
   city.placeholder = isRu ? "[Введите город]" : "[Enter city]";
   userName.placeholder = isRu ? "[Введите имя]" : "[Enter name]";
-  city2.textContent = isRu ? "И узнайте погоду" : "And see the forecast";
+  defaultText.textContent = isRu ? "И узнайте погоду" : "And see the forecast";
   languageSelector.textContent = isRu ? "Выберите язык" : "Choose language";
   rus.textContent = isRu ? "Русский" : "Russian";
   eng.textContent = isRu ? "Английский" : "English";
   audioVolume.textContent = isRu ? "Громкость:" : "Volume:";
   audioPosition.textContent = isRu ? "Позиция трека:" : "Position:";
 
-  setTitle.textContent = isRu ? "Настройки" : "Settings";
-  imgTitle.textContent = isRu
-    ? "Выберите источник изображений:"
-    : "Select images source:";
   visibleBlocks.textContent = isRu ? "Отображаемые блоки" : "Visible blocks";
   timeBlock.textContent = isRu ? "Время:" : "Time:";
   dateBlock.textContent = isRu ? "Дата:" : "Date:";
+  year.textContent = isRu ? `${currentYear} года` : `${currentYear} year`;
   greetingsBlock.textContent = isRu ? "Приветствие:" : "Greetings:";
   quotesBlock.textContent = isRu ? "Фраза дня:" : "Quote of the Day:";
   weatherBlock.textContent = isRu ? "Погода:" : "Weather:";
   playerBlock.textContent = isRu ? "Плеер:" : "Player:";
-  toDoBlock.textContent = isRu ? "Список дел:" : "Todo list:";
-  closeToDo.textContent = isRu ? "ЗАКРЫТЬ Х" : "CLOSE Х";
-  toDoDiv.textContent = isRu ? "СПИСОК ДЕЛ" : "TO DO LIST";
+  languageBlock.textContent = isRu ? "Язык:" : "Language:";
 
   updateQuote(locale);
   updateDate(locale);
@@ -193,34 +169,17 @@ eng.addEventListener("click", () => {
 });
 
 // Настройки
-settings.style.backgroundImage = "url(/assets/svg/2344310.png)";
+settings.style.backgroundImage = "url(/assets/svg/settings.png)";
 settings.onclick = () => {
   popupBlock.style.visibility = "visible";
-  popupBlock.classList.remove("transperent-settings");
+  popupBlock.classList.remove("transparent-settings");
   blure.style.visibility = "visible";
-  tagSetted.style.visibility = "hidden";
 };
 
 blure.onclick = () => {
   popupBlock.style.visibility = "hidden";
   blure.style.visibility = "hidden";
-  tagSetted.style.visibility = "hidden";
-  popupBlock.classList.toggle("transperent-settings");
-  imgSetted.textContent = "GitHub";
-};
-
-imgSetted.onclick = () => {
-  tagSetted.style.visibility = "visible";
-  imgSetted.textContent = "Unsplash API";
-  tagSetted.style.background = "transparent";
-  tagSetted.style.color = "white";
-};
-
-closeToDo.onclick = () => {
-  todoTable.style.visibility = "hidden";
-  toDoSeted.classList.add("is-hide");
-  const locale = localStorage.getItem("locale") || "ru";
-  toDoSeted.textContent = locale === "ru" ? "Показать" : "Show";
+  popupBlock.classList.toggle("transparent-settings");
 };
 
 // Установить язык по умолчанию и инициализировать настройки

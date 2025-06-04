@@ -1,6 +1,6 @@
 const body = document.querySelector("body");
-let slideIndex = getRandomNum(1, 156);
-const totalSlides = 156;
+let slideIndex = getRandomNum(1, 163);
+const totalSlides = 163;
 
 // Генерация случайного числа в заданном диапазоне
 function getRandomNum(min, max) {
