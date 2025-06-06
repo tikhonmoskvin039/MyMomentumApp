@@ -1,33 +1,53 @@
 const playList = [
   {
     title: "Ace of Base - All That She Wants",
-    rusTitle: "Гармония воды",
     src: "../assets/sounds/Ace of Base - All That She Wants.mp3",
     duration: "03:34",
   },
   {
     title: "Ace of Base - The Sign",
-    rusTitle: "Река течёт в тебе",
     src: "../assets/sounds/Ace of Base - The Sign.mp3",
     duration: "03:08",
   },
   {
     title: "Blue - Curtain falls",
-    rusTitle: "Летний ветер",
     src: "../assets/sounds/Blue - Curtain falls.mp3",
     duration: "03:40",
   },
   {
     title: "E-Type - I Just Wanna Be With You",
-    rusTitle: "Эннио Морриконе",
     src: "../assets/sounds/E-Type - I Just Wanna Be With You.mp3",
     duration: "03:46",
   },
   {
     title: "Jessica Jay - Casablanca",
-    rusTitle: "Эннио Морриконе",
     src: "../assets/sounds/Jessica Jay - Casablanca.mp3",
     duration: "06:20",
+  },
+  {
+    title: "Manfred Mann's Earth Band - Angels At My Gate",
+    src: "../assets/sounds/Manfred Mann's Earth Band - Angels At My Gate.mp3",
+    duration: "04:50",
+  },
+  {
+    title: "Jeff Wayne - The Eve of the War",
+    src: "../assets/sounds/Jeff Wayne - The Eve of the War.mp3",
+    duration: "04:25",
+  },
+  {
+    title: "Scorpions - Hotel California",
+    src: "../assets/sounds/Scorpions - Hotel California.mp3",
+    duration: "06:13",
+  },
+  {
+    title: "Scorpions - Here I Am (Send Me An Angel)",
+    src: "../assets/sounds/Scorpions - Here I Am (Send Me An Angel).mp3",
+    duration: "04:18",
+  },
+  {
+    title: "Led Zeppelin - Stairway To Heaven (1971)",
+    src: "../assets/sounds/Led Zeppelin - Stairway To Heaven (1971).mp3",
+    duration: "08:05",
   },
 ];
 

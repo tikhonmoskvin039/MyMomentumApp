@@ -22,6 +22,7 @@ const weatherBlock = document.querySelector(".b-weather-title");
 const playerBlock = document.querySelector(".b-player-title");
 const centralClock = document.querySelector(".time");
 const centralDate = document.querySelector(".date");
+const centralYear = document.querySelector(".year");
 const userName = document.querySelector(".name");
 const greetingContainer = document.querySelector(".greeting-container");
 const quoteOfTheDay = document.querySelector(".quoteOfTheDay");
@@ -44,7 +45,10 @@ const eng = document.querySelector(".english");
 // Карта блоков для переключения видимости
 const toggleMap = {
   1: () => centralClock.classList.toggle("transparent-block"),
-  2: () => centralDate.classList.toggle("transparent-block"),
+  2: () => {
+    centralDate.classList.toggle("transparent-block");
+    centralYear.classList.toggle("transparent-block");
+  },
   3: () => greetingContainer.classList.toggle("transparent-block"),
   4: () => {
     quoteOfTheDay.classList.toggle("transparent-block");

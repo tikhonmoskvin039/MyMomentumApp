@@ -7,10 +7,11 @@
   <link href="assets/favicon.ico" rel="shortcut icon" />
   <link rel="stylesheet" href="css/owfont-regular.css" />
   <link rel="stylesheet" href="css/style.css" />
-  <title>С Днем Рождения, мама! ❤️</title>
+  <title>Лучшие моменты на долгую память, мам! ❤️ 16.06.25. Люблю. Сын.</title>
 </head>
 
 <body>
+  <img class="vacation"/>
   <header class="header">
     <div class="player">
       <div class="player-controls">
@@ -18,10 +19,10 @@
         <button class="play player-icon"></button>
         <button class="play-next player-icon"></button>
       </div>
-      
+
       <!-- Переносим аудио сюда -->
       <audio src="/assets/sounds/Ace of Base - All That She Wants.mp3" class="audioClass"></audio>
-      
+
       <ul class="play-list"></ul>
       <div class="player-extra">
         <label class="audio_position">
@@ -38,12 +39,12 @@
       </div>
     </div>
 
-    
+
     <div class="weather">
       <div class="time_date">
-        <time class="time"></time>
-        <date class="date"></date>
-        <year class="year"></year>
+        <div class="time"></div>
+        <div class="date"></div>
+        <div class="year"></div>
       </div>
       <div class="dropdown">
         <button id="dropdownButton" class="dropbtn">Выберите язык</button>
@@ -53,8 +54,9 @@
         </div>
       </div>
       <form autocomplete="off" action="#">
-        <div class="autocomplete" >
-          <input id="myInput" style="width:100%;" type="text" class="city" name="myCountry" placeholder="[Введите город]" value="" />
+        <div class="autocomplete">
+          <input id="myInput" style="width:100%;" type="text" class="city" name="myCountry"
+            placeholder="[Введите город]" value="" />
         </div>
       </form>
       <div class="defaultText">И узнайте погоду</div>
@@ -84,7 +86,7 @@
       <input type="text" class="toDoInput" placeholder="6.">
       <input type="text" class="toDoInput" placeholder="7.">
     </div>
-   
+
   </main>
   <footer class="footer">
     <div class="greeting-container">
@@ -97,45 +99,46 @@
         <div class="author"></div>
       </div>
       <div class="quote_btn">
-        <button class="change-quote"/>
+        <button class="change-quote" />
       </div>
     </div>
     <div class="settings player-icon">
     </div>
+    </div>
+    </div>
+    </div>
+  </footer>
+  <div class="blure"></div>
+  <div class="blockPopup transparent-settings">
+    <h2 class="visible-blocks">Отображаемые блоки</h2>
+    <div class="settings-line">
+      <div class="b-time-title settings-title">Время:</div><a class="b-time-seted settings-seted"></a>
+    </div>
+    <div class="settings-line">
+      <div class="b-date-title settings-title">Дата:</div><a class="b-date-seted settings-seted"></a>
+    </div>
+    <div class="settings-line">
+      <div class="b-hello-title settings-title">Приветствие:</div><a class="b-hello-seted settings-seted"></a>
+    </div>
+    <div class="settings-line">
+      <div class="b-quote-title phrase-title">Фраза дня:</div>
+      <a class="b-quote-seted settings-seted"></a>
+    </div>
+    <div class="settings-line">
+      <div class="b-weather-title settings-title">Погода:</div><a class="b-weather-seted settings-seted"></a>
+    </div>
+    <div class="settings-line">
+      <div class="b-player-title settings-title">Медиаплеер:</div><a class="b-player-seted settings-seted"></a>
+    </div>
+    <div class="settings-line">
+      <div class="b-language-title settings-title">Язык:</div><a class="b-todo-seted settings-seted"></a>
+    </div>
   </div>
-</div>
-</div>
-</footer>
-<div class="blure"></div>
-<div class="blockPopup transparent-settings">
-  <h2 class="visible-blocks">Отображаемые блоки</h2>
-  <div class="settings-line">
-    <div class="b-time-title settings-title">Время:</div><a class="b-time-seted settings-seted"></a>
-  </div>
-  <div class="settings-line">
-    <div class="b-date-title settings-title">Дата:</div><a class="b-date-seted settings-seted"></a>
-  </div>
-  <div class="settings-line">
-    <div class="b-hello-title settings-title">Приветствие:</div><a class="b-hello-seted settings-seted"></a>
-  </div>
-  <div class="settings-line">
-    <div class="b-quote-title phrase-title">Фраза дня:</div>
-    <a class="b-quote-seted settings-seted"></a>
-  </div>
-  <div class="settings-line">
-    <div class="b-weather-title settings-title">Погода:</div><a class="b-weather-seted settings-seted"></a>
-  </div>
-  <div class="settings-line">
-    <div class="b-player-title settings-title">Медиаплеер:</div><a class="b-player-seted settings-seted"></a>
-  </div>
-  <div class="settings-line">
-    <div class="b-language-title settings-title">Язык:</div><a class="b-todo-seted settings-seted"></a>
-  </div>
-</div>
   <script defer type="module" src="index.js"></script>
   <script async src="slider.js"></script>
   <script type="module" src="player.js"></script>
   <script type="module" src="settings.js"></script>
+  <script type="module" src="holyday_bcgrnd.js"></script>
 </body>
 
 </html>
