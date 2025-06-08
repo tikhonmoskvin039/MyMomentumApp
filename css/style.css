@@ -1,5 +1,5 @@
 @font-face {
-  font-family: 'Arial-MT';
+  font-family: "Arial-MT";
   src: url("../assets/fonts/Arial-MT.woff");
 }
 
@@ -11,7 +11,7 @@
 }
 
 body {
-  font-family: 'Arial', sans-serif;
+  font-family: "Arial", sans-serif;
   font-size: 16px;
   text-align: center;
   background: center / cover no-repeat, rgba(0, 0, 0, 0.5);
@@ -19,7 +19,6 @@ body {
   transition: background-image 1s ease-in-out;
 }
 
-/* Header */
 .header {
   display: flex;
   justify-content: space-between;
@@ -29,7 +28,6 @@ body {
   padding: 2rem;
 }
 
-/* Audio Player */
 .player {
   z-index: 1000;
   font-size: 0.7rem;
@@ -98,7 +96,6 @@ body {
   transform: scale(1.1);
 }
 
-/* Play Buttons */
 .play {
   width: 40px;
   height: 40px;
@@ -117,7 +114,6 @@ body {
   background-image: url("../assets/svg/play-next.svg");
 }
 
-/* Playlist */
 .play-list {
   text-align: left;
 }
@@ -147,7 +143,6 @@ body {
   color: #fe0303;
 }
 
-/* Weather */
 .weather {
   z-index: 1000;
   display: flex;
@@ -155,7 +150,6 @@ body {
   justify-content: space-between;
   align-items: center;
   row-gap: 5px;
-  width: 230px;
   padding: 1rem;
   text-align: left;
   border-radius: 12px;
@@ -180,7 +174,6 @@ body {
   justify-content: flex-start;
 }
 
-/* City Input */
 .city,
 .defaultText {
   display: flex;
@@ -221,7 +214,6 @@ body {
   opacity: 0.6;
 }
 
-/* Name Input */
 .name {
   flex: 1;
   padding: 10px;
@@ -238,7 +230,6 @@ body {
   opacity: 0.6;
 }
 
-/* Time and Date */
 .time_date {
   display: flex;
   flex-direction: column;
@@ -247,14 +238,15 @@ body {
 }
 
 .time {
-  font-family: 'Arial-MT';
+  font-family: "Arial-MT";
   width: 100%;
   font-size: 2.5rem;
   transition: opacity 1s;
   transition-delay: 1.5s;
 }
 
-.date, .year {
+.date,
+.year {
   font-size: 1.4rem;
   font-style: oblique;
   transition: opacity 1s;
@@ -262,7 +254,6 @@ body {
   white-space: pre-line;
 }
 
-/* Greeting */
 .greeting-container {
   z-index: 1000;
   display: flex;
@@ -277,7 +268,6 @@ body {
   transition-delay: 1.5s;
 }
 
-/* Main Center Block */
 .main {
   display: flex;
   flex-direction: column;
@@ -286,13 +276,13 @@ body {
   height: 40vh;
 }
 
-/* Background Slider */
 .slider-icons {
   padding: 2rem;
   display: flex;
   justify-content: space-between;
   width: 100%;
 }
+
 .slider-icon {
   cursor: pointer;
 }
@@ -307,7 +297,6 @@ body {
   background-image: url("../assets/svg/slider-next.png");
 }
 
-/* Quote */
 .quoteOfTheDay {
   z-index: 1000;
   display: flex;
@@ -336,7 +325,6 @@ body {
   transition-delay: 1.5s;
 }
 
-/* Footer */
 .footer {
   display: flex;
   justify-content: space-between;
@@ -347,7 +335,6 @@ body {
   transition-delay: 1.5s;
 }
 
-/* Autocomplete Input */
 input {
   width: 100%;
   font-size: 16px;
@@ -385,11 +372,10 @@ input:focus {
   overflow: hidden;
 }
 
-/* Dropdown */
 .dropdown {
   position: relative;
   display: inline-block;
-  font-family: 'Segoe UI', sans-serif;
+  font-family: "Segoe UI", sans-serif;
 }
 
 .dropbtn {
@@ -437,84 +423,28 @@ input:focus {
   display: block;
 }
 
-
 @keyframes fadeIn {
   from {
     opacity: 0;
     transform: translateY(-5px);
   }
+
   to {
     opacity: 1;
     transform: translateY(0);
   }
 }
 
-/* Hidden Elements */
 .hidden {
   display: none;
 }
 
-/* Transparent Block */
 .transparent-block {
   opacity: 0;
   display: none;
   transition: opacity 1s;
   transition-delay: 1.5s;
 }
-
-/* Media Queries */
-@media (max-width: 768px) {
-  .time {
-    min-height: 80px;
-    font-size: 72px;
-  }
-
-  .greeting-container {
-    font-size: 32px;
-    min-height: 40px;
-  }
-
-  .name {
-    font-size: 32px;
-    padding: 5px;
-  }
-}
-
-@media (max-width: 600px) {
-  .dropbtn {
-    font-size: 14px;
-    padding: 14px;
-    width: 100px;
-  }
-
-  .play-item {
-    font-size: 13px;
-  }
-}
-
-@media (max-width: 430px) {
-  .greeting {
-    font-size: 22px;
-    padding-bottom: 30px;
-  }
-
-  .name {
-    font-size: 22px;
-    margin-bottom: 5px;
-  }
-
-  .name::placeholder {
-    font-size: 22px;
-  }
-
-  .play-item {
-    text-overflow: ellipsis;
-    white-space: nowrap;
-    overflow: hidden;
-  }
-}
-
-/* ---------- AUTOCOMPLETE ---------- */
 
 .autocomplete-items div {
   padding: 12px 16px;
@@ -533,9 +463,6 @@ input:focus {
   background-color: #007bff !important;
   color: #fff;
 }
-
-
-/* ---------- SETTINGS ICON ---------- */
 
 .settings {
   filter: brightness(0.7) invert(0%);
@@ -562,9 +489,6 @@ input:focus {
   z-index: 1000;
 }
 
-
-/* ---------- POPUP BLOCK ---------- */
-
 .blockPopup {
   position: absolute;
   top: 10vw;
@@ -587,9 +511,6 @@ input:focus {
   z-index: 1002;
 }
 
-
-/* ---------- BLUR BACKGROUND ---------- */
-
 .blure {
   position: fixed;
   top: 0;
@@ -604,9 +525,6 @@ input:focus {
   transition: opacity 1s;
   transition-delay: 1.5s;
 }
-
-
-/* ---------- HEADINGS ---------- */
 
 .blockPopup h2 {
   z-index: 1000;
@@ -626,9 +544,6 @@ h3 {
   margin: 1em 0;
 }
 
-
-/* ---------- SETTINGS LINE ---------- */
-
 .settings-line {
   display: flex;
   justify-content: space-between;
@@ -636,9 +551,6 @@ h3 {
   margin: 0 auto 5px auto;
   opacity: 0.7;
 }
-
-
-/* ---------- LINKS ---------- */
 
 a {
   cursor: pointer;
@@ -653,65 +565,117 @@ a:hover {
   opacity: 0.5;
 }
 
-
-/* ---------- SLIDER ---------- */
-
 .volume-slider {
   accent-color: #af844c;
 }
 
+@media (max-width: 768px) {
+  html,
+  body {
+    overflow: hidden;
+    height: 100%;
+    position: fixed;
+    width: 100%;
+    margin: 0;
+    padding: 0;
+    flex: 1 1 1;
+  }
 
-/* ---------- TO DO LIST ---------- */
+  .header {
+    flex-direction: row;
+    gap: 1rem;
+  }
 
-.toDoList {
-  position: fixed;
-  top: 10%;
-  left: 50%;
-  transform: translateX(-50%);
-  width: 340px;
-  max-width: 90%;
-  height: 400px;
-  padding: 20px;
+  .player-weather-wrapper {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    gap: 1rem;
+    width: 100%;
+    flex-wrap: wrap;
+  }
 
-  display: flex;
-  flex-direction: column;
-  gap: 15px;
+  .player,
+  .weather {
+    flex: 1 1 45%;
+    max-width: 48%;
+    font-size: 0.75rem;
+    align-items: center;
+    text-align: center;
+  }
 
-  background: rgba(30, 30, 30, 0.95);
-  backdrop-filter: blur(8px);
-  color: #C5B358;
-  font-size: 20px;
-  border-radius: 20px;
-  box-shadow: 0 10px 25px rgba(0, 0, 0, 0.6);
+  .card-style.player,
+  .card-style.weather {
+    padding: 0.5rem;
+    margin: 0;
+    background-color: rgba(211, 211, 211, 0.85);
+  }
 
-  visibility: hidden;
-  opacity: 0;
-  z-index: 10;
+  .quoteOfTheDay {
+    margin-top: 1rem;
+    flex-direction: column;
+    align-items: center;
+    gap: 0.5rem;
+  }
 
-  transition: opacity 0.6s ease, visibility 0.6s ease;
-}
+  .main {
+    gap: 1rem;
+  }
 
-/* Когда нужно показать */
-.toDoList.visible {
-  visibility: visible;
-  opacity: 1;
-}
+  .date,
+  .year {
+    font-size: 0.9rem;
+  }
 
-.toDoInput {
-  padding: 10px 15px;
-  border: none;
-  border-radius: 10px;
-  background-color: rgba(255, 255, 255, 0.05);
-  color: #C5B358;
-  font-size: 16px;
-  outline: none;
-  transition: background-color 0.3s ease;
-}
+  .time {
+    font-size: 1.4rem;
+  }
 
-.toDoInput::placeholder {
-  color: rgba(197, 179, 88, 0.5);
-}
+  .footer {
+    position: absolute;
+    left: 0;
+    bottom: 0;
+    flex-direction: column;
+    padding-top: 0;
+    height: fit-content;
+  }
 
-.toDoInput:focus {
-  background-color: rgba(255, 255, 255, 0.1);
+  .greeting-container,
+  .name {
+    width: 100%;
+    font-size: 1.3rem;
+  }
+
+  .quoteOfTheDay {
+    width: 100%;
+    font-size: 0.9rem;
+  }
+
+  .city,
+  .defaultText {
+    height: 22px;
+    font-size: 16px;
+  }
+
+  .dropbtn {
+    font-size: 12px;
+    padding: 5px;
+  }
+
+  .weather-icon {
+    display: none;
+  }
+
+  .blockPopup {
+    top: 10vw;
+    left: 10vw;
+    width: 80vw;
+  }
+
+  .card-style.player,
+  .card-style.quoteOfTheDay,
+  .card-style.greeting-container,
+  .card-style.weather {
+    background-color: rgba(211, 211, 211, 0.45);
+  }
 }

@@ -1,8 +1,13 @@
 const body = document.querySelector("body");
-let slideIndex = getRandomNum(1, 234);
-const totalSlides = 234;
+let slideIndex = getRandomNum(1, isMobile() ? 142 : 234);
+const totalSlides = isMobile() ? 142 : 234;
 
-// Генерация случайного числа в заданном диапазоне
+// Проверка: мобилка или нет
+function isMobile() {
+  return window.matchMedia("(max-width: 768px)").matches;
+}
+
+// Генерация случайного числа в диапазоне
 function getRandomNum(min, max) {
   return Math.floor(Math.random() * (max - min + 1)) + min;
 }
@@ -10,8 +15,10 @@ function getRandomNum(min, max) {
 // Установка фоновой картинки по индексу
 function setBg(index = slideIndex) {
   const formattedIndex = index.toString().padStart(2, "0");
+  const folder = isMobile() ? "img_mobile" : "img";
+  console.log("folder", folder);
   const img = new Image();
-  img.src = `assets/img/${formattedIndex}.jpg`;
+  img.src = `assets/${folder}/${formattedIndex}.jpg`;
   img.onload = () => {
     body.style.backgroundImage = `url(${img.src})`;
   };
@@ -23,20 +30,23 @@ setBg();
 const nextButton = document.querySelector(".slide-next");
 const prevButton = document.querySelector(".slide-prev");
 
-// Следующий слайд
 nextButton.addEventListener("click", () => {
   slideIndex = slideIndex < totalSlides ? slideIndex + 1 : 1;
   setBg(slideIndex);
 });
 
-// Предыдущий слайд
 prevButton.addEventListener("click", () => {
   slideIndex = slideIndex > 1 ? slideIndex - 1 : totalSlides;
   setBg(slideIndex);
 });
 
-// 🔁 Автоматическое переключение картинки каждые 2 секунды
+// Автоматическое переключение раз в 10 секунд
 setInterval(() => {
   slideIndex = getRandomNum(1, totalSlides);
   setBg(slideIndex);
 }, 10000);
+
+// Обновляем фон при смене размера экрана (на случай перехода между mobile/desktop)
+window.addEventListener("resize", () => {
+  setBg(slideIndex);
+});

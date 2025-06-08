@@ -7,50 +7,59 @@ const playPauseButton = document.querySelector(".play");
 const audio = document.querySelector("audio");
 const playPrev = document.querySelector(".play-prev");
 const playNext = document.querySelector(".play-next");
+const currentTrack = document.querySelector(".current-track-title");
 
 function renderPlayList() {
   const playListContainer = document.querySelector(".play-list");
-  playListContainer.innerHTML = ""; // Очистка старого списка
+  playListContainer.innerHTML = "";
 
-  const indices = [
-    (playNum - 1 + playList.length) % playList.length, // предыдущий
-    playNum, // текущий
-    (playNum + 1) % playList.length, // следующий
-  ];
+  const isMobile = window.matchMedia("(max-width: 768px)").matches;
 
-  indices.forEach((index, i) => {
+  if (isMobile) {
     const li = document.createElement("li");
-    li.classList.add("play-item");
-    if (index === playNum) li.classList.add("item-active");
-
-    li.textContent = playList[index].title;
-
-    li.addEventListener("click", () => {
-      if (index === playNum) {
-        if (isPlay) {
-          audio.pause();
-          isPlay = false;
-          playPauseButton.classList.remove("pause");
-        } else {
-          audio.play();
-          isPlay = true;
-          playPauseButton.classList.add("pause");
-        }
-      } else {
-        playNum = index;
-        playTrack(playNum);
-      }
-    });
-
+    li.classList.add("play-item", "item-active");
+    li.textContent = playList[playNum].title;
     playListContainer.appendChild(li);
-  });
+  } else {
+    const indices = [
+      (playNum - 1 + playList.length) % playList.length, // предыдущий
+      playNum, // текущий
+      (playNum + 1) % playList.length, // следующий
+    ];
+
+    indices.forEach((index) => {
+      const li = document.createElement("li");
+      li.classList.add("play-item");
+      if (index === playNum) li.classList.add("item-active");
+      li.textContent = playList[index].title;
+
+      li.addEventListener("click", () => {
+        if (index === playNum) {
+          if (isPlay) {
+            audio.pause();
+            isPlay = false;
+            playPauseButton.classList.remove("pause");
+          } else {
+            audio.play();
+            isPlay = true;
+            playPauseButton.classList.add("pause");
+          }
+        } else {
+          playNum = index;
+          playTrack(playNum);
+        }
+      });
+
+      playListContainer.appendChild(li);
+    });
+  }
 }
 
 renderPlayList();
 audio.src = playList[playNum].src;
 
 // Функция для обновления активного класса
-function updateActiveTrack(index) {
+function updateActiveTrack() {
   const items = document.querySelectorAll(".play-item");
   items.forEach((item, i) => {
     item.classList.toggle("item-active", i === 1); // Текущий трек всегда в середине
