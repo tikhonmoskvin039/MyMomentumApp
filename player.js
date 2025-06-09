@@ -7,7 +7,6 @@ const playPauseButton = document.querySelector(".play");
 const audio = document.querySelector("audio");
 const playPrev = document.querySelector(".play-prev");
 const playNext = document.querySelector(".play-next");
-const currentTrack = document.querySelector(".current-track-title");
 
 function renderPlayList() {
   const playListContainer = document.querySelector(".play-list");

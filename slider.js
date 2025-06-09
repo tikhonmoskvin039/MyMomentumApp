@@ -1,6 +1,6 @@
 const body = document.querySelector("body");
-let slideIndex = getRandomNum(1, isMobile() ? 142 : 234);
-const totalSlides = isMobile() ? 142 : 234;
+const TOTAL_SLIDES = 235;
+let slideIndex = getRandomNum(1, TOTAL_SLIDES);
 
 // Проверка: мобилка или нет
 function isMobile() {
@@ -16,7 +16,6 @@ function getRandomNum(min, max) {
 function setBg(index = slideIndex) {
   const formattedIndex = index.toString().padStart(2, "0");
   const folder = isMobile() ? "img_mobile" : "img";
-  console.log("folder", folder);
   const img = new Image();
   img.src = `assets/${folder}/${formattedIndex}.jpg`;
   img.onload = () => {
@@ -31,18 +30,18 @@ const nextButton = document.querySelector(".slide-next");
 const prevButton = document.querySelector(".slide-prev");
 
 nextButton.addEventListener("click", () => {
-  slideIndex = slideIndex < totalSlides ? slideIndex + 1 : 1;
+  slideIndex = slideIndex < TOTAL_SLIDES ? slideIndex + 1 : 1;
   setBg(slideIndex);
 });
 
 prevButton.addEventListener("click", () => {
-  slideIndex = slideIndex > 1 ? slideIndex - 1 : totalSlides;
+  slideIndex = slideIndex > 1 ? slideIndex - 1 : TOTAL_SLIDES;
   setBg(slideIndex);
 });
 
 // Автоматическое переключение раз в 10 секунд
 setInterval(() => {
-  slideIndex = getRandomNum(1, totalSlides);
+  slideIndex = getRandomNum(1, TOTAL_SLIDES);
   setBg(slideIndex);
 }, 10000);
 
