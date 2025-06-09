@@ -1,10 +1,16 @@
+function isMobile() {
+  return window.matchMedia("(max-width: 768px)").matches;
+}
+
+let previousIsMobile = isMobile(); // Запоминаем изначальное состояние
+
 function setHolidayBackground() {
   const img = document.querySelector("img.vacation");
   if (!img) return;
 
   const today = new Date();
   const day = today.getDate();
-  const month = today.getMonth() + 1; // Месяцы от 0 до 11
+  const month = today.getMonth() + 1;
 
   let fileName = "";
 
@@ -23,15 +29,28 @@ function setHolidayBackground() {
   } else if (day === 1 && month === 6) {
     fileName = "summer_first_day.png";
   } else if (day === 1 && month === 9) {
-    fileName = "autumn_first_day.png"; // !
+    fileName = "autumn_first_day.png";
   }
 
   if (fileName) {
-    img.src = `./assets/transparent-backgroungs/${fileName}`;
-    img.style.display = "block"; // Показываем элемент, если был скрыт
+    const folder = isMobile()
+      ? "transparent-backgroungs-mobile"
+      : "transparent-backgroungs";
+    img.src = `./assets/${folder}/${fileName}`;
+    img.style.display = "block";
   } else {
-    img.style.display = "none"; // Скрываем, если сегодня не праздник
+    img.style.display = "none";
   }
 }
 
+// При загрузке
 document.addEventListener("DOMContentLoaded", setHolidayBackground);
+
+// При изменении размера окна — если изменился "режим", меняем картинку
+window.addEventListener("resize", () => {
+  const currentIsMobile = isMobile();
+  if (currentIsMobile !== previousIsMobile) {
+    previousIsMobile = currentIsMobile;
+    setHolidayBackground(); // Обновляем картинку
+  }
+});

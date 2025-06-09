@@ -17,7 +17,7 @@ function setBg(index = slideIndex) {
   const formattedIndex = index.toString().padStart(2, "0");
   const folder = isMobile() ? "img_mobile" : "img";
   const img = new Image();
-  img.src = `assets/${folder}/${formattedIndex}.jpg`;
+  img.src = `assets/${folder}/${formattedIndex}.jpg?${Date.now()}`;
   img.onload = () => {
     body.style.backgroundImage = `url(${img.src})`;
   };
