@@ -14,7 +14,10 @@ body {
   font-family: "Arial", sans-serif;
   font-size: 16px;
   text-align: center;
-  background: center / cover no-repeat, rgba(0, 0, 0, 0.5);
+  background-color: rgba(0, 0, 0, 0.5);
+  background-repeat: no-repeat;
+  background-position: center;
+  background-size: cover;
   overflow: hidden;
   transition: background-image 1s ease-in-out;
 }
