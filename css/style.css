@@ -15,6 +15,7 @@ body {
   font-size: 16px;
   text-align: center;
   background-color: rgba(0, 0, 0, 0.5);
+  background-image: none;
   background-repeat: no-repeat;
   background-position: center;
   background-size: cover;
@@ -686,4 +687,10 @@ a:hover {
   .dropdown-content {
     min-width: 100px;
   }
+}
+
+/* Временный нюанс */
+.vacation,
+.blure {
+  display: none !important;
 }

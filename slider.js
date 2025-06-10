@@ -23,7 +23,9 @@ function setBg(index = slideIndex) {
   };
 }
 
-setBg();
+window.onload = () => {
+  setBg();
+};
 
 // Кнопки переключения
 const nextButton = document.querySelector(".slide-next");
