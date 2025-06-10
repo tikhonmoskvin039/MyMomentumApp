@@ -32,6 +32,8 @@ window.addEventListener("DOMContentLoaded", () => {
   setBg();
 });
 
+setBg();
+
 // Кнопки переключения
 const nextButton = document.querySelector(".slide-next");
 const prevButton = document.querySelector(".slide-prev");
