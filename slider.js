@@ -17,9 +17,17 @@ function setBg(index = slideIndex) {
   const formattedIndex = index.toString().padStart(2, "0");
   const folder = isMobile() ? "img_mobile" : "img";
   const img = new Image();
-  img.src = `assets/${folder}/${formattedIndex}.jpg?${Date.now()}`;
+  img.src = `/assets/${folder}/${formattedIndex}.jpg?nocache=${Date.now()}`; // <--- ВАЖНО: абсолютный путь
+
+  console.log("Пытаюсь загрузить фон:", img.src);
+
   img.onload = () => {
-    body.style.backgroundImage = `url("${img.src}")`;
+    console.log("Успешно загружен фон:", img.src);
+    document.body.style.backgroundImage = `url("${img.src}")`;
+  };
+
+  img.onerror = () => {
+    console.error("Ошибка загрузки изображения:", img.src);
   };
 }
 
