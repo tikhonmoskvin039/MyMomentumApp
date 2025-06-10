@@ -18,7 +18,7 @@ function setHolidayBackground() {
     fileName = "happy_NY.png";
   } else if (day === 25 && month === 12) {
     fileName = "merry_christmas.png";
-  } else if (day === 16 && month === 6) {
+  } else if (day === 1 && month === 6) {
     fileName = "happy_birthday.png";
   } else if (day === 8 && month === 3) {
     fileName = "international_womens_day.png";

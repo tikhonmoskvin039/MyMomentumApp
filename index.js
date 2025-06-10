@@ -2,6 +2,10 @@ import { cities, rusDays, rusMonths } from "./assets/consts.js";
 
 export const currentYear = new Date().getFullYear();
 
+function isMobile() {
+  return window.matchMedia("(max-width: 768px)").matches;
+}
+
 let locale = "ru";
 export const getLocale = () => locale;
 export const setLocale = (val) => {
@@ -115,7 +119,59 @@ function userGreetings() {
 
   setText(".greeting", greeting);
 }
+
 userGreetings();
+
+const nightTime = new Date();
+nightTime.setHours(0); // Set hours to 10PM
+nightTime.setMinutes(0); // Set minutes to 0
+nightTime.setSeconds(0); // Set seconds to 0
+nightTime.setMilliseconds(0); // Set milliseconds to 0
+
+const morningTime = new Date();
+morningTime.setHours(6); // Set hours to 10PM
+morningTime.setMinutes(0); // Set minutes to 0
+morningTime.setSeconds(0); // Set seconds to 0
+morningTime.setMilliseconds(0); // Set milliseconds to 0
+
+const dayTime = new Date();
+dayTime.setHours(12); // Set hours to 10PM
+dayTime.setMinutes(0); // Set minutes to 0
+dayTime.setSeconds(0); // Set seconds to 0
+dayTime.setMilliseconds(0); // Set milliseconds to 0
+
+const eveningTime = new Date();
+eveningTime.setHours(18); // Set hours to 10PM
+eveningTime.setMinutes(0); // Set minutes to 0
+eveningTime.setSeconds(0); // Set seconds to 0
+eveningTime.setMilliseconds(0); // Set milliseconds to 0
+
+const now = new Date();
+let nightDelay = nightTime.getTime() - now.getTime();
+let morningDelay = morningTime.getTime() - now.getTime();
+let dayDelay = dayTime.getTime() - now.getTime();
+let eveningDelay = eveningTime.getTime() - now.getTime();
+
+if (nightDelay < 0) {
+  nightDelay += 24 * 60 * 60 * 1000; // If time has passed, schedule for next day
+}
+
+if (morningDelay < 0) {
+  morningDelay += 24 * 60 * 60 * 1000; // If time has passed, schedule for next day
+}
+
+if (dayDelay < 0) {
+  dayDelay += 24 * 60 * 60 * 1000; // If time has passed, schedule for next day
+}
+
+if (eveningDelay < 0) {
+  eveningDelay += 24 * 60 * 60 * 1000; // If time has passed, schedule for next day
+}
+
+setTimeout(userGreetings, nightDelay);
+setTimeout(userGreetings, morningDelay);
+setTimeout(userGreetings, dayDelay);
+setTimeout(userGreetings, eveningDelay);
 //-------------------------------LOCAL STORAGE---------------------------------
 const userName = document.querySelector(".name");
 
@@ -123,12 +179,16 @@ function setLocalStorage() {
   localStorage.setItem("city", city.value);
   localStorage.setItem("name", userName.value);
 }
+
 window.addEventListener("beforeunload", setLocalStorage);
+
 function getLocalStorage() {
   if (localStorage.getItem("city")) {
     city.value = localStorage.getItem("city");
   }
-  if (localStorage.getItem("name")) {
+  if (isMobile()) {
+    userName.value = "Мам ❤️";
+  } else if (localStorage.getItem("name")) {
     userName.value =
       localStorage.getItem("name").length > 10
         ? localStorage.getItem("name").slice(0, 10) + "..."

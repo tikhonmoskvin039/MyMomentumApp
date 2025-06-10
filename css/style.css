@@ -221,13 +221,13 @@ body {
 
 .name {
   flex: 1;
+  display: flex;
+  justify-content: center;
+  align-items: center;
   padding: 10px;
   font-size: 40px;
   color: #000;
   background-color: transparent;
-  border: none;
-  outline: none;
-  text-align: left;
 }
 
 .name::placeholder {
@@ -648,6 +648,7 @@ a:hover {
   .name {
     width: 100%;
     font-size: 1.3rem;
+    height: 7vh;
   }
 
   .city,
