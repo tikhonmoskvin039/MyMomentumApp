@@ -199,8 +199,17 @@ setLocale(initialLocale);
 updateLanguageText(initialLocale);
 setupSettingsToggle(initialLocale);
 
-// При изменении размера окна — если изменился "режим", меняем картинку
+// При изменении размера окна
 window.addEventListener("resize", () => {
+  if (isMobile()) {
+    audioVolume.style.display = "none";
+  } else {
+    audioVolume.style.display = "block";
+  }
+});
+
+// До загрузки
+window.addEventListener("beforeunload", () => {
   if (isMobile()) {
     audioVolume.style.display = "none";
   } else {
