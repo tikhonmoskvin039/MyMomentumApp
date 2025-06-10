@@ -525,7 +525,7 @@ input:focus {
 
   background-color: rgba(25, 24, 24, 0.7);
   visibility: hidden;
-  z-index: 1001;
+  /* z-index: 1001; */
 
   transition: opacity 1s;
   transition-delay: 1.5s;

@@ -19,10 +19,7 @@ function setBg(index = slideIndex) {
   const img = new Image();
   img.src = `/assets/${folder}/${formattedIndex}.jpg?nocache=${Date.now()}`; // <--- ВАЖНО: абсолютный путь
 
-  console.log("Пытаюсь загрузить фон:", img.src);
-
   img.onload = () => {
-    console.log("Успешно загружен фон:", img.src);
     document.body.style.backgroundImage = `url("${img.src}")`;
   };
 
