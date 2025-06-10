@@ -19,13 +19,13 @@ function setBg(index = slideIndex) {
   const img = new Image();
   img.src = `assets/${folder}/${formattedIndex}.jpg?${Date.now()}`;
   img.onload = () => {
-    body.style.backgroundImage = `url(${img.src})`;
+    body.style.backgroundImage = `url("${img.src}")`;
   };
 }
 
-window.onload = () => {
+window.addEventListener("DOMContentLoaded", () => {
   setBg();
-};
+});
 
 // Кнопки переключения
 const nextButton = document.querySelector(".slide-next");
