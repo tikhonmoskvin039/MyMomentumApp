@@ -15,16 +15,11 @@
   <header class="header">
 
     <div class="player card-style">
-      <div class="player-controls">
-        <button class="play-prev player-icon"></button>
-        <button class="play player-icon"></button>
-        <button class="play-next player-icon"></button>
-      </div>
 
       <audio src="/assets/sounds/Ace of Base - All That She Wants.mp3" class="audioClass"></audio>
 
       <div class="current-track-title"></div>
-      
+
       <ul class="play-list"></ul>
       <div class="player-extra">
         <label class="audio_position">
@@ -38,6 +33,11 @@
         </label>
         <input type="range" class="volume-slider" min="0" max="1" step="0.01" value="0.5" id="volumeSlider">
         <span id="volumeValue">50%</span>
+      </div>
+      <div class="player-controls">
+        <button class="play-prev player-icon"></button>
+        <button class="play player-icon"></button>
+        <button class="play-next player-icon"></button>
       </div>
     </div>
 
@@ -55,19 +55,19 @@
           <a href="#" class="russian">Русский</a>
         </div>
       </div>
-        <form autocomplete="off" action="#">
-          <div class="autocomplete">
-            <input id="myInput" style="width:100%;" type="text" class="city" name="myCountry"
-              placeholder="[Введите город]" value="" />
-          </div>
-        </form>
-        <div class="defaultText">И узнайте погоду</div>
-        <i class="weather-icon owf"></i>
+      <form autocomplete="off" action="#">
+        <div class="autocomplete">
+          <input id="myInput" style="width:100%;" type="text" class="city" name="myCountry"
+            placeholder="[Введите город]" value="" />
+        </div>
+      </form>
+      <div class="defaultText">И узнайте погоду</div>
+      <i class="weather-icon owf"></i>
 
-        <div class="weather-error"></div>
-        <div class="description-container">
-          <span class="temperature"></span>
-          <span class="weather-description"></span>
+      <div class="weather-error"></div>
+      <div class="description-container">
+        <span class="temperature"></span>
+        <span class="weather-description"></span>
       </div>
       <div class="wind"></div>
       <div class="humidity"></div>

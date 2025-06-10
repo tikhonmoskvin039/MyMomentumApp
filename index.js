@@ -2,10 +2,6 @@ import { cities, rusDays, rusMonths } from "./assets/consts.js";
 
 export const currentYear = new Date().getFullYear();
 
-function isMobile() {
-  return window.matchMedia("(max-width: 768px)").matches;
-}
-
 let locale = "ru";
 export const getLocale = () => locale;
 export const setLocale = (val) => {
@@ -186,7 +182,7 @@ function getLocalStorage() {
   if (localStorage.getItem("city")) {
     city.value = localStorage.getItem("city");
   }
-  if (isMobile()) {
+  if (!localStorage.getItem("name")) {
     userName.value = "Мам ❤️";
   } else if (localStorage.getItem("name")) {
     userName.value =
@@ -443,6 +439,9 @@ function autocomplete(inp, arr) {
 
 autocomplete(myInput, cities);
 
+/*How to capture the hide keyboard event on iOS using JavaScript
+ * Without this snippet, the app container stayed in the up-scrolled position until page refresh.
+ */
 document.addEventListener("focusout", function (e) {
   window.scrollTo(0, 0);
 });

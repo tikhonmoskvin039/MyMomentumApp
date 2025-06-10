@@ -8,6 +8,10 @@ import {
 } from "./index.js";
 import { days, months, rusDays, rusMonths } from "./assets/consts.js";
 
+function isMobile() {
+  return window.matchMedia("(max-width: 768px)").matches;
+}
+
 // DOM-элементы
 const settings = document.querySelector(".settings");
 const visibleBlocks = document.querySelector(".visible-blocks");
@@ -93,7 +97,11 @@ function updateLanguageText(locale) {
   languageSelector.textContent = isRu ? "Выберите язык" : "Choose language";
   rus.textContent = isRu ? "Русский" : "Russian";
   eng.textContent = isRu ? "Английский" : "English";
-  audioVolume.textContent = isRu ? "Громкость:" : "Volume:";
+  if (isMobile()) {
+    audioVolume.style.display = "none";
+  } else {
+    audioVolume.textContent = isRu ? "Громкость:" : "Volume:";
+  }
   audioPosition.textContent = isRu ? "Позиция трека:" : "Position:";
 
   visibleBlocks.textContent = isRu ? "Отображаемые блоки" : "Visible blocks";
