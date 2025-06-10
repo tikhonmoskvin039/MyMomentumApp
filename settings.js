@@ -209,7 +209,7 @@ window.addEventListener("resize", () => {
 });
 
 // До загрузки
-window.addEventListener("beforeunload", () => {
+window.addEventListener("DOMContentLoaded", () => {
   if (isMobile()) {
     audioVolume.style.display = "none";
   } else {
