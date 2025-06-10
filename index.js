@@ -197,6 +197,7 @@ function getLocalStorage() {
   getWeather();
   hiddenInfo();
 }
+
 document.addEventListener("DOMContentLoaded", getLocalStorage);
 //------------------------------/LOCAL STORAGE---------------------------------
 //-------------------------------WEATHER API---------------------------------
@@ -441,3 +442,7 @@ function autocomplete(inp, arr) {
 }
 
 autocomplete(myInput, cities);
+
+document.addEventListener("focusout", function (e) {
+  window.scrollTo(0, 0);
+});
