@@ -147,6 +147,11 @@ body {
   color: #fe0303;
 }
 
+.audio_position, .audio_volume {
+  display: flex;
+  flex-direction: column;
+}
+
 .weather {
   z-index: 1000;
   display: flex;

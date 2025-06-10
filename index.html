@@ -22,17 +22,23 @@
 
       <ul class="play-list"></ul>
       <div class="player-extra">
-        <label class="audio_position">
-          Позиция трека:
-        </label>
-        <input type="range" class="progress-bar" value="0" min="0" max="100" id="progressBar">
-        <span id="progressValue">00:00 / 00:00</span>
+        <div class="audio_position">
+
+          <label class="audio_position_label">
+            Позиция трека:
+          </label>
+          <input type="range" class="progress-bar" value="0" min="0" max="100" id="progressBar">
+          <span id="progressValue">00:00 / 00:00</span>
+        </div>
         <br>
-        <label class="audio_volume">
-          Громкость:
-        </label>
-        <input type="range" class="volume-slider" min="0" max="1" step="0.01" value="0.5" id="volumeSlider">
-        <span id="volumeValue">50%</span>
+        <div class="audio_volume">
+
+          <label class="audio_volume_label">
+            Громкость:
+          </label>
+          <input type="range" class="volume-slider" min="0" max="1" step="0.01" value="0.5" id="volumeSlider">
+          <span id="volumeValue">50%</span>
+        </div>
       </div>
       <div class="player-controls">
         <button class="play-prev player-icon"></button>

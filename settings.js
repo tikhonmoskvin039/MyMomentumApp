@@ -35,7 +35,8 @@ const popupBlock = document.querySelector(".blockPopup");
 const blure = document.querySelector(".blure");
 const weather = document.querySelector(".weather");
 
-const audioPosition = document.querySelector(".audio_position");
+const audioPositionLabel = document.querySelector(".audio_position_label");
+const audioVolumeLabel = document.querySelector(".audio_volume_label");
 const audioVolume = document.querySelector(".audio_volume");
 
 const allSettings = document.querySelectorAll(".settings-seted");
@@ -97,12 +98,10 @@ function updateLanguageText(locale) {
   languageSelector.textContent = isRu ? "Выберите язык" : "Choose language";
   rus.textContent = isRu ? "Русский" : "Russian";
   eng.textContent = isRu ? "Английский" : "English";
-  if (isMobile()) {
-    audioVolume.style.display = "none";
-  } else {
-    audioVolume.textContent = isRu ? "Громкость:" : "Volume:";
-  }
-  audioPosition.textContent = isRu ? "Позиция трека:" : "Position:";
+
+  audioVolumeLabel.textContent = isRu ? "Громкость:" : "Volume:";
+
+  audioPositionLabel.textContent = isRu ? "Позиция трека:" : "Position:";
 
   visibleBlocks.textContent = isRu ? "Отображаемые блоки" : "Visible blocks";
   timeBlock.textContent = isRu ? "Время:" : "Time:";
@@ -199,3 +198,12 @@ const initialLocale = "ru"; // или "en"
 setLocale(initialLocale);
 updateLanguageText(initialLocale);
 setupSettingsToggle(initialLocale);
+
+// При изменении размера окна — если изменился "режим", меняем картинку
+window.addEventListener("resize", () => {
+  if (isMobile()) {
+    audioVolume.style.display = "none";
+  } else {
+    audioVolume.style.display = "block";
+  }
+});
