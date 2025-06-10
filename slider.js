@@ -20,7 +20,7 @@ function setBg(index = slideIndex) {
   img.src = `/assets/${folder}/${formattedIndex}.jpg?nocache=${Date.now()}`; // <--- ВАЖНО: абсолютный путь
 
   img.onload = () => {
-    document.body.style.backgroundImage = `url("${img.src}")`;
+    body.style.backgroundImage = `url(${img.src})`;
   };
 
   img.onerror = () => {

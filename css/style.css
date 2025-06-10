@@ -574,7 +574,7 @@ a:hover {
   accent-color: #af844c;
 }
 
-@media (max-width: 768px) {
+/* @media (max-width: 768px) {
   html,
   body {
     overflow: hidden;
@@ -684,4 +684,4 @@ a:hover {
   .dropdown-content {
     min-width: 100px;
   }
-}
+} */
