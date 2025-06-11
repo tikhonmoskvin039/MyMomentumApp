@@ -4,6 +4,56 @@ let slideIndex = getRandomNum(1, TOTAL_SLIDES);
 let touchStartX = 0;
 let touchEndX = 0;
 
+let inactivityTimer;
+let hintTimeout;
+let hasInteracted = false;
+
+function showSwipeHint() {
+  const hint = document.querySelector(".swipe-hint");
+
+  hint.classList.remove("animate"); // сброс на случай повтора
+  hint.style.display = "flex"; // показать до применения анимации
+
+  void hint.offsetWidth; // форсируем перерисовку
+
+  hint.classList.add("animate");
+
+  // Скрываем после окончания анимации
+  clearTimeout(hintTimeout);
+  hintTimeout = setTimeout(() => {
+    hint.classList.remove("animate");
+    hint.style.display = "none";
+  }, 10000); // длительность анимации
+}
+
+function resetInactivityTimer() {
+  clearTimeout(inactivityTimer);
+
+  const delay = hasInteracted ? 60 * 1000 : 10 * 1000; // 1 минута или 10 секунд
+
+  inactivityTimer = setTimeout(() => {
+    if (isMobile()) showSwipeHint();
+    resetInactivityTimer(); // запустить следующий цикл
+  }, delay);
+}
+
+// Слушаем действия пользователя и устанавливаем флаг
+["touchstart", "click", "mousemove", "keydown"].forEach((event) => {
+  document.addEventListener(
+    event,
+    () => {
+      if (!hasInteracted) {
+        hasInteracted = true;
+      }
+      resetInactivityTimer();
+    },
+    { passive: true }
+  );
+});
+
+// Запускаем отсчет при загрузке
+resetInactivityTimer();
+
 function handleSwipe() {
   const swipeDistance = touchEndX - touchStartX;
 

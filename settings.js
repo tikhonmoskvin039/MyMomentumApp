@@ -19,6 +19,7 @@ const visibleBlocks = document.querySelector(".visible-blocks");
 const timeBlock = document.querySelector(".b-time-title");
 const dateBlock = document.querySelector(".b-date-title");
 const year = document.querySelector(".year");
+const swipeHintText = document.querySelector(".swipe-hint-text");
 const languageBlock = document.querySelector(".b-language-title");
 const greetingsBlock = document.querySelector(".b-hello-title");
 const quotesBlock = document.querySelector(".b-quote-title");
@@ -107,6 +108,9 @@ function updateLanguageText(locale) {
   timeBlock.textContent = isRu ? "Время:" : "Time:";
   dateBlock.textContent = isRu ? "Дата:" : "Date:";
   year.textContent = isRu ? `${currentYear} года` : `${currentYear} year`;
+  swipeHintText.textContent = isRu
+    ? "Смахните влево или вправо для переключения фото"
+    : "Swipe left or right to switch photos";
   greetingsBlock.textContent = isRu ? "Приветствие:" : "Greetings:";
   quotesBlock.textContent = isRu ? "Фраза дня:" : "Quote of the Day:";
   weatherBlock.textContent = isRu ? "Погода:" : "Weather:";

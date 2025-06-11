@@ -580,6 +580,56 @@ a:hover {
   accent-color: #af844c;
 }
 
+@keyframes swipeHintPulseTwice {
+  0% {
+    opacity: 0;
+    transform: scale(0.95);
+  }
+  10% {
+    opacity: 1;
+    transform: scale(1.05);
+  }
+  25% {
+    opacity: 0;
+    transform: scale(0.95);
+  }
+  35% {
+    opacity: 1;
+    transform: scale(1.05);
+  }
+  50% {
+    opacity: 0;
+    transform: scale(0.95);
+  }
+  100% {
+    opacity: 0;
+    transform: scale(0.95);
+  }
+}
+
+.swipe-hint {
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  align-items: center;
+  background: rgba(211, 194, 6, 0.7);
+  color: white;
+  padding: 20px 30px;
+  border-radius: 12px;
+  font-size: 16px;
+  text-align: center;
+  z-index: 1000;
+  width: 100%;
+  margin-bottom: 1rem;
+  pointer-events: none;
+  transition: opacity 0.5s ease;
+}
+
+.swipe-hint.animate {
+  display: flex;
+  animation: swipeHintPulseTwice 10s ease;
+}
+
 @media (max-width: 768px) {
   html,
   body {
@@ -701,5 +751,32 @@ a:hover {
 
   .dropdown-content {
     min-width: 100px;
+  }
+
+  .slide-prev, .slide-next {
+    display: none;
+  }
+
+
+  .slider-icon-mobile-prev {
+    margin-right: 1rem;
+    background-image: url("../assets/svg/prev-mobile.png");
+    background-size: contain;
+    background-repeat: no-repeat;
+    background-position: center;
+    width: 3rem;
+    height: 2rem; /* Обязательно указать высоту */
+    display: block; /* Или flex, если нужно */
+  }
+  
+  .slider-icon-mobile-next {
+    margin-left: 1rem;
+    background-image: url("../assets/svg/next-mobile.png");
+    background-size: contain;
+    background-repeat: no-repeat;
+    background-position: center;
+    width: 3rem;
+    height: 2rem; /* Обязательно указать высоту */
+    display: block; /* Или flex, если нужно */
   }
 }
