@@ -1,6 +1,35 @@
 const body = document.querySelector("body");
 const TOTAL_SLIDES = 235;
 let slideIndex = getRandomNum(1, TOTAL_SLIDES);
+let touchStartX = 0;
+let touchEndX = 0;
+
+function handleSwipe() {
+  const swipeDistance = touchEndX - touchStartX;
+
+  // Учитываем минимальную дистанцию для свайпа
+  if (Math.abs(swipeDistance) < 50) return;
+
+  if (swipeDistance < 0) {
+    // Свайп влево — следующий слайд
+    slideIndex = slideIndex < TOTAL_SLIDES ? slideIndex + 1 : 1;
+  } else {
+    // Свайп вправо — предыдущий слайд
+    slideIndex = slideIndex > 1 ? slideIndex - 1 : TOTAL_SLIDES;
+  }
+
+  setBg(slideIndex);
+}
+
+// Навешиваем события на body
+body.addEventListener("touchstart", (e) => {
+  touchStartX = e.changedTouches[0].screenX;
+});
+
+body.addEventListener("touchend", (e) => {
+  touchEndX = e.changedTouches[0].screenX;
+  handleSwipe();
+});
 
 // Проверка: мобилка или нет
 function isMobile() {
