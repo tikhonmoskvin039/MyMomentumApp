@@ -10,7 +10,7 @@
   color: black;
 }
 
-body {
+body, html {
   font-family: "Arial", sans-serif;
   font-size: 16px;
   text-align: center;
@@ -21,6 +21,8 @@ body {
   background-size: cover;
   overflow: hidden;
   transition: background-image 1s ease-in-out;
+    width: 800px; /* например */
+    height: 600px;
 }
 
 .header {
@@ -35,7 +37,7 @@ body {
 .player {
   z-index: 1000;
   font-size: 0.7rem;
-  width: 15vw;
+  width: 30vw;
   padding: 1rem;
   border-radius: 12px;
   background-color: rgba(211, 211, 211, 0.8);
@@ -160,9 +162,10 @@ body {
   align-items: center;
   row-gap: 5px;
   padding: 1rem;
+  font-size: 14px;
   text-align: left;
   border-radius: 12px;
-  background-color: rgba(211, 211, 211, 0.8);
+  background-color: #d3d3d3cc;
   transition: opacity 1s;
   transition-delay: 1.5s;
 }
@@ -200,6 +203,7 @@ body {
 .city {
   width: 170px;
   font-size: 20px;
+  font-size: 16px;
   border-bottom: 1px solid #fff;
 }
 
@@ -229,7 +233,7 @@ body {
   display: flex;
   justify-content: center;
   align-items: center;
-  font-size: 2.3rem;
+  font-size: 20px;
   padding: 10px;
   color: #000;
   background-color: transparent;
@@ -248,16 +252,19 @@ body {
 }
 
 .time {
+  display: flex;
+  justify-content: center;
+  align-items: center;
   font-family: "Arial-MT";
   width: 100%;
-  font-size: 2.5rem;
+  font-size: 1.5rem;
   transition: opacity 1s;
   transition-delay: 1.5s;
 }
 
 .date,
 .year {
-  font-size: 1.4rem;
+  font-size: 1.2rem;
   font-style: oblique;
   transition: opacity 1s;
   transition-delay: 1.5s;
@@ -270,7 +277,7 @@ body {
   flex-wrap: wrap;
   align-items: center;
   padding: 0 1rem;
-  font-size: 40px;
+  font-size: 20px;
   border-radius: 12px;
   width: 50%;
   background-color: rgba(211, 211, 211, 0.8);
@@ -502,8 +509,8 @@ input:focus {
 
 .blockPopup {
   position: absolute;
-  top: 10vw;
-  left: 30vw;
+  top: 22vw;
+  left: 14vw;
   width: 580px;
   height: fit-content;
   max-width: 100%;
@@ -718,7 +725,7 @@ a:hover {
   .name {
     width: 100%;
     font-size: 1.3rem;
-    height: 7vh;
+    height: 5vh;
   }
 
   .city,

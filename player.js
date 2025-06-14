@@ -12,7 +12,7 @@ function renderPlayList() {
   const playListContainer = document.querySelector(".play-list");
   playListContainer.innerHTML = "";
 
-  const isMobile = window.matchMedia("(max-width: 768px)").matches;
+  const isMobile = window.matchMedia("(max-width: 800px)").matches;
 
   if (isMobile) {
     const li = document.createElement("li");
