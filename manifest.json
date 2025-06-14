@@ -1,15 +1,18 @@
 {
-    "manifest_version": 3,
-    "name": "Поздравление для мамы",
-    "version": "16.06.25",
-    "description": "Расширение, созданное Москвиным Тихоном, для поздравления мамы с ДР ❤️",
-    "chrome_url_overrides": {
-      "newtab": "index.html"
-    },
-    "icons": {
-      "16": "assets/favicon-16x16.png",
-      "48": "assets/favicon-32x32.png",
-      "128": "assets/android-chrome-192x192.png"
-    }
+  "manifest_version": 3,
+  "name": "Поздравление для мамы",
+  "version": "16.06.25",
+  "description": "Расширение, созданное Москвиным Тихоном, для поздравления мамы с ДР ❤️",
+  "background": {
+  "service_worker": "background.js"
+},
+"action": {
+  "default_title": "Открыть поздравление"
+},
+"permissions": ["tabs"],
+  "icons": {
+    "16": "assets/favicon-16x16.png",
+    "48": "assets/favicon-32x32.png",
+    "128": "assets/android-chrome-192x192.png"
   }
-  
+}
